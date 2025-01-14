@@ -1559,6 +1559,12 @@ INPUT journal/tag1.tex
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./journal/tag2.tex
 INPUT journal/tag2.tex
 INPUT ./journal/tag2.tex
