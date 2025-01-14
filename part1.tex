@@ -40,6 +40,8 @@ PoC
 \item Die erwähnten Komponenten (ohne Optionale) funktionieren im UI und haben eine minimale, funktionierende Testabdeckung (happy path)
 \end{itemize}
 
+\newpage
+
 Out of Scope - wird nicht oder erst nach der Probe IPA umgesetzt
 
 \begin{itemize}
@@ -84,7 +86,7 @@ Projektmethode:
 Konventionen:
 
 \begin{itemize}
-    \item Es gilt der Ruby Style Guide (https://github.com/rubocop-hq/ruby-style-guide) und der Rails Style Guide (https://github.com/rubocop-hq/rails-style-guide) gemäss Rubocop Konfiguration des Projekts (https://github.com/puzzle/cryptopus/blob/master/.rubocop.yml)
+    \item Es gilt der \href{https://github.com/rubocop-hq/ruby-style-guide}{Ruby Style Guide} und der \href{https://github.com/rubocop-hq/rails-style-guide}{Rails Style Guide} gemäss Rubocop \href{https://github.com/puzzle/cryptopus/blob/master/.rubocop.yml}{Konfiguration des Projekts}
 \end{itemize}
 
 \subsection{Vorkenntnisse}
@@ -219,6 +221,72 @@ einsehen. Diese Security Conventions umfassen:
 \chapter{Organisation der IPA-Ergebnisse}
 
 \chapter{Projektmethode}
+Die verwendete Projektmethode dieser IPA ist SCRUM. Abweichungen und Werkzeuge welcher der Umsetzung
+dieser IPA nach SCRUM verwendet werden, sind im folgenden Abschnitt beschrieben.
+
+\section{Github Board}
+Um die Userstories, Aufwandschätzungen und den Projektstatus zu verfolgen verwende ich Github Projects. 
+
+\subsection{Backlog}
+Zu Beginn der IPA wurde ein Backlog erstellt indem alle User Stories aufgeführt werden. Die Stories im Backlog
+müssen noch nicht detailliert spezifiziert sein, sie dienen dazu eine Übersicht über noch offene Aufgaben während
+der IPA zu erhalten.
+
+\subsection{Refinement}
+In der Refinement Spalte werden die Userstories vor dem Sprint Planning detaillierter beschrieben und mit Akzeptanzkriterien versehen. 
+Der Detailbeschrieb dient dazu die Story später im Sprint Planning besser schätzen zu können.
+Falls eine Userstory zu gross wird, wird sie in dieser Spalte auf zwei oder mehrere Stories unterteilt. Ausserdem werden pro Userstory Akzeptanzkriterien
+definiert welche erfüllt werden müssen um diese während des Sprints abzuschliessen.
+
+\newpage
+
+\subsection{Sprint Backlog}
+Anfangs Sprint wird immer ein Sprint Planning durchgeführt. Dabei werden die Userstories geschätzt und in den Sprint Backlog gezogen. 
+Am Ende des Sprints sollte der Sprint Backlog leer sein. Ist dies nicht der Fall muss die Story zurück ins Refinement, neu beschrieben werden 
+(falls Änderungen aufgetaucht sind) und muss dann in den nächsten Sprint weitergezogen werden.
+
+\subsection{In Progress}
+Während des Sprints werden Ticket in die In Progress-Spalte geschoben sobald die Arbeit daran beginnt.
+
+\subsection{Done}
+Eine Userstory kann in die Done-Spalte gezogen werden, wenn alle Akzeptanzkriterien erfüllt wurden.
+Die Story gilt danach als abgeschlossen.
+
+\section{Sprints}
+Die gesamte IPA wird in drei Sprints unterteilt, diese umfassen je eine der folgenden
+Phasen:
+
+\begin{itemize}
+\item Initialisierung
+\item Umsetzung
+\item Finalisierung    
+\end{itemize}
+
+Jedes Ticket wurde mit einem der Phasen gelabeled. So kann abgeschätzt werden, welche Tickets in welchem
+Sprint erledigt werden müssen.
+
+\section{Sprint Planning}
+Das Planning findet immer zu Beginn des nächsten Sprints statt. Während des Sprint Plannings werden die zu erledigenden
+Stories vom Refinement in den Sprint Backlog geschoben und geschätzt. Um die Planung im Zeitplan
+besser darzustellen, wird definiert dass die Stories in Stunden anstatt Story Points geschätzt werden. Die niedrigste Schätzung
+entspricht dabei einem Betrag von 0.5 Stunden.
+
+\section{Daily}
+Jeden Morgen findet ein Daily mit der verantwortlichen Fachkraft und der zusätzlichen verantwortlichen Fachkraft statt
+welche den Stand des Sprintes prüfen und offene Fragen von mir beantworten. Ausserdem präsentiere ich im Daily den Stand der 
+Dokumentation welche meine zuständigen Fachkräfte prüfen und mir Tipps zur Verbesserung geben. 
+
+\section{Verwendungsgrund}
+Die Projektvorgehensmethod wurde so gewählt, da sie für die IPA mehrere Vorteile bringt:
+
+\begin{itemize}
+    \item \textbf{Sprint Ende:} SCRUM zwingt den Entwickler dazu am Ende des Sprintes ein brauchbares Produkt zu haben
+    \item \textbf{Agilität:} Wenn eine Story nicht erreicht wurde, kann sie in den nächsten Sprint gezogen werden
+    \item \textbf{Daily:} Durch die Dailies wird ein täglicher Austausch zwischen Fachkraft und Kandidat sichergestellt
+    \item \textbf{Akzeptanzkriterien:} Mit den Kriterien verhindern wir das abschliessen von halbfertigen Features oder fehlerhafter Software
+    \item \textbf{Board:} Durch das Github Projects Board ermöglichen wir eine schnelle Übersicht über den Stand der IPA
+
+\end{itemize}
 
 \chapter{Projektaufbauorganisation}
 
