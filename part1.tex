@@ -1,10 +1,4 @@
 \part[Ablauf, Organisation und Umfeld]{Ablauf, Organisation und Umfeld
-        \begin{center}
-            \begin{minipage}[c]{10.7cm}
-            \small Hitobito: Neue Generation von Personen-Filtern \\
-            Autor: Marc Egli
-            \end{minipage}
-        \end{center}
     }
 
 \tableofcontents
@@ -167,8 +161,60 @@ unter \hyperref[sec:gitconv]{Git Conventions} finden sie eine Kopie unserer Firm
 \section{Documentation Conventions}
 Als Documentation covention wird arc42 verwendet (Siehe \href{https://arc42.org/documentation/}{arc 42 documentation}). 
 
-
 \chapter{IPA-Schutzbedarfanalyse}
+
+\section{Datensicherheit}
+Die notwendigen Daten welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
+sind werden durch das \href{https://github.com/faker-ruby/faker}{Faker-Gem} generiert und sind somit NICHT 
+besonders schützenswert. Dazu gehören unter anderem Adressen, Familiendaten, Finanzdaten.
+
+\section{Applikationssicherheit}
+
+Da keine besonders schützenswerte Daten verwendet werden, werden die Standards von
+Puzzle ITC nach Firmen-Sicherheitsbuch verwendet. Sie können dieses unter \hyperref[sec:secconv]{Security Conventions}
+einsehen. Diese Security Conventions umfassen:
+
+\begin{itemize}
+    \item{Injection / Cross Size Scripting}
+    \begin{itemize}
+        \item{Input Validierung von allen Inputs serverseitig durchführen}
+        \item{Output Encoding auf allen Outputs anwenden}
+        \item{Kein inline oder dynamisches SQL, sondern parametrisierte Queries verwenden}
+        \item {Datei Uploads überprüfen}
+    \end{itemize}
+    \item Verbindungs- / Browsersicherheit
+    \begin{itemize}
+        \item{Nur HTTPS verwenden und korrekt konfigurieren}
+        \item{Security Headers setzen}
+        \item{Cookie Flags secure, httpOnly und SameSite setzen}
+        \item{Kein Caching von sensiblen Informationen}
+    \end{itemize}
+
+    \newpage
+
+    \item Authentication / Sessions
+    \begin{itemize}
+        \item{IAM des Frameworks oder besser Keycloak verwenden}
+        \item{Keine sensitiven Infos in URL Parameter}
+        \item{Brute Force Schutz}
+        \item{ Sessions schützen}
+    \end{itemize}
+    \item Tools und Betriebsumgebung
+    \begin{itemize}
+        \item{Errorhandling und Logging}
+        \item{Libraries und deren Dependencies auf bekannte Schwachstellen prüfen}
+        \item{OS, Webserver, Container aktuell halten und Hardening}
+        \item{Keine Produktionsdaten auf Integrationsumgebungen}
+    \end{itemize}
+    \item Security Testing
+    \begin{itemize}
+        \item{Es dürfen keine Secrets im Repository abgelegt werden}
+        \item{Eingebundene Dependencies dürfen keine MEDIUM und HIGH Schwachstellen aufweisen}
+        \item{Eine statische Codeanalyse sollte durchgeführt werden}
+        \item{Eine dynamische Codeanalyse sollte durchgeführt werden}
+        \item{Alle verwendeten Images sollten auf Schwachstellen gescannt werden}
+    \end{itemize}
+\end{itemize}
 
 \chapter{Organisation der IPA-Ergebnisse}
 
