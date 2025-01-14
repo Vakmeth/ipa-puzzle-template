@@ -40,8 +40,10 @@
 \contentsline {subsection}{\numberline {11.4.2}Funktionale Anforderungen}{24}{subsection.11.4.2}%
 \contentsline {section}{\numberline {11.5}Abgrenzung}{24}{section.11.5}%
 \contentsline {chapter}{\numberline {12}Entwurf}{25}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Testkonzept}{25}{section.12.1}%
-\contentsline {chapter}{\numberline {13}Umsetzung}{26}{chapter.13}%
+\contentsline {section}{\numberline {12.1}Lösungsvarianten}{25}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Variantenentscheid}{25}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Ausarbeitung}{25}{section.12.3}%
+\contentsline {chapter}{\numberline {13}Ausführung}{26}{chapter.13}%
 \contentsline {section}{\numberline {13.1}Testprotokoll}{26}{section.13.1}%
 \contentsline {chapter}{\numberline {14}Einführung}{27}{chapter.14}%
 \contentsline {chapter}{\numberline {15}Sprintabschlüsse}{28}{chapter.15}%
@@ -53,7 +55,7 @@
 \contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{30}{section.16.1}%
 \contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{30}{section.16.2}%
 \contentsline {section}{\numberline {16.3}Code Verzeichnis}{30}{section.16.3}%
-\contentsline {subsection}{Quellenverzeichnis}{31}{chapter*.84}%
+\contentsline {subsection}{Quellenverzeichnis}{31}{chapter*.83}%
 \contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{32}{chapter.17}%
 \contentsline {chapter}{\numberline {18}Glossar}{33}{chapter.18}%
 \contentsline {chapter}{\numberline {19}Anhänge}{34}{chapter.19}%

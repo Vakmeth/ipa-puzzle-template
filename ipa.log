@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  14 JAN 2025 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  14 JAN 2025 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1038,7 +1038,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 8.
-<bilder//puzzle_tagline_blau.png, id=257, 311.1625pt x 81.30376pt>
+<bilder//puzzle_tagline_blau.png, id=265, 311.1625pt x 81.30376pt>
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
 Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 8.
@@ -1555,15 +1555,9 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 ]
 Kapitel 12.
-(./testkonzept.tex
-Overfull \hbox (5.19876pt too wide) in paragraph at lines 7--22
-[][] 
- []
-
-)
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 30.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 34.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1587,7 +1581,7 @@ Overfull \hbox (5.19876pt too wide) in paragraph at lines 7--26
 )
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 34.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 38.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1605,7 +1599,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 Kapitel 14.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 36.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 40.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1798,21 +1792,21 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
 Package rerunfilecheck Info: File `ipa.out' has not changed.
-(rerunfilecheck)             Checksum: 33E283D958317EC0368AF2D98EAA6745;8741.
+(rerunfilecheck)             Checksum: 0C37F38519D6D78EFF4B5ABD5279E36D;9041.
  ) 
 Here is how much of TeX's memory you used:
- 31541 strings out of 478287
- 596485 string characters out of 5849289
+ 31539 strings out of 478287
+ 596436 string characters out of 5849289
  1176157 words of memory out of 5000000
  48869 multiletter control sequences out of 15000+600000
  520837 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,129p,461b,746s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,16n,129p,461b,745s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on ipa.pdf (36 pages, 215885 bytes).
+Output written on ipa.pdf (36 pages, 215720 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 592 compressed objects within 6 object streams
- 182 named destinations out of 1000 (max. 500000)
- 498 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 680 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 
