@@ -25,80 +25,148 @@ Die Basis für die Software bildet das Webframework Ruby on Rails. Für das User
 \section{Detaillierte Aufgabenstellung}
 Mit dieser Probe-IPA soll ein neues Konzept und Datenmodell für die Persistierung von Filter-Parametern erstellt werden (rein Backend). Anschliessend soll dieses Konzept in einem Proof of Concept (PoC) bei einem Teil der Mailinglisten (Abos) umgesetzt werden.
 
-- Die Klassen Subscription, RelatedRoleType, PeopleFilter, usw. werden im neuen Konzept komplett ersetzt oder ggf. ergänzt
-- Eine Möglichkeit ist das PeopleFilter die Basis für das neue Konzept bilden
-- Es sollen 2-3 Grobkonzepte gegenüber gestellt werden und das ausgewählte Konzept detaillierter ausgearbeitet werden
+\begin{itemize}
+    \item Die Klassen Subscription, RelatedRoleType, PeopleFilter, usw. werden im neuen Konzept komplett ersetzt oder ggf. ergänzt
+    \item Eine Möglichkeit ist das PeopleFilter die Basis für das neue Konzept bilden
+    \item Es sollen 2-3 Grobkonzepte gegenüber gestellt werden und das ausgewählte Konzept detaillierter ausgearbeitet werden
+\end{itemize}
 
 PoC
 
-- Folgende Komponenten der MailingLists Filter sollen mit dem neuen Konzept im PoC umgesetzt werden:
-    - Globale Bedingungen > Sprache
-    - Personen
-    - Ausgeschlossene Personen
-    - Optional: Gruppen / Rollen
-
-- Persistierte Subscriptions/Filter müssen für den PoC vorerst nicht migriert werden
-
-- Die nicht erwähnten Komponenten müssen nicht mehr funktionieren
-
-- Die erwähnten Komponenten (ohne Optionale) funktionieren im UI und haben eine minimale, funktionierende Testabdeckung (happy path)
+\begin{itemize}
+\item Folgende Komponenten der MailingLists Filter sollen mit dem neuen Konzept im PoC umgesetzt werden:
+    \begin{itemize}
+        \item Globale Bedingungen > Sprache
+        \item Personen
+        \item Ausgeschlossene Personen
+        \item Optional: Gruppen / Rollen
+    \end{itemize}    
+\item Persistierte Subscriptions/Filter müssen für den PoC vorerst nicht migriert werden
+\item Die nicht erwähnten Komponenten müssen nicht mehr funktionieren
+\item Die erwähnten Komponenten (ohne Optionale) funktionieren im UI und haben eine minimale, funktionierende Testabdeckung (happy path)
+\end{itemize}
 
 Out of Scope - wird nicht oder erst nach der Probe IPA umgesetzt
 
-- Konzept und Anpassungen Frontend/UI
-- PoC Umbau/Migration People Filter Personenlisten
-- JSON API Filter (Grafiti)
+\begin{itemize}
+    \item Konzept und Anpassungen Frontend/UI
+    \item PoC Umbau/Migration People Filter Personenlisten
+    \item JSON API Filter (Grafiti)
+\end{itemize}
+
+\newpage
 
 \subsection{Mittel und Methoden}
+
 Technologie und Plattform:
 
-- Ruby, Ruby on Rails, Active Record
+\begin{itemize}
+    \item Ruby, Ruby on Rails, Active Record
+\end{itemize}
 
 Entwicklungsumgebung:
 
-- Intellij
-
-- Git, Github
-
-- Rake
-
-- Rubocop
+\begin{itemize}
+    \item Intellij
+    \item Git, Github
+    \item Rake
+    \item Rubocop
+\end{itemize}
 
 Textverarbeitung und Diagramme:
 
-- Latex
-
-- draw.io
-
-- Google Sheets
+\begin{itemize}
+    \item Latex
+    \item draw.io
+    \item Google Sheets
+\end{itemize}
 
 Projektmethode:
 
-- Scrum IPA
+\begin{itemize}
+    \item Scrum IPA
+\end{itemize}
 
 Konventionen:
 
-- Es gilt der Ruby Style Guide (https://github.com/rubocop-hq/ruby-style-guide) und der Rails Style Guide (https://github.com/rubocop-hq/rails-style-guide) gemäss Rubocop Konfiguration des Projekts (https://github.com/puzzle/cryptopus/blob/master/.rubocop.yml)
-
-
+\begin{itemize}
+    \item Es gilt der Ruby Style Guide (https://github.com/rubocop-hq/ruby-style-guide) und der Rails Style Guide (https://github.com/rubocop-hq/rails-style-guide) gemäss Rubocop Konfiguration des Projekts (https://github.com/puzzle/cryptopus/blob/master/.rubocop.yml)
+\end{itemize}
 
 \subsection{Vorkenntnisse}
 Marc arbeitet bereits seit einigen Monaten an Features von Hitobito. Ausserdem hat er bereits seit dem 2. Lehrjahr Erfahrung auch in anderen Ruby on Rails Projekten gesammelt.
 
 \subsection{Vorarbeiten}
-- Vorbereitung Dokumentvorlage
-- Ist-Analyse Personen-Filter Personen-Listen/Abos
-- Dokumentation in der Developer-Dokumentation der bestehenden Implementation von MailingLists, FilteredList, Personen-Filter
+\begin{itemize}
+    \item Vorbereitung Dokumentvorlage
+    \item Ist-Analyse Personen-Filter Personen-Listen/Abos
+    \item Dokumentation in der Developer-Dokumentation der bestehenden Implementation von MailingLists, FilteredList, Personen-Filter
+\end{itemize}
 
 \subsection{Neue Lerninhalte}
-- Eigenständiges Entwerfen der Datenstruktur/Klassen
+
+\begin{itemize}
+    \item Eigenständiges Entwerfen der Datenstruktur/Klassen
+\end{itemize}
 
 \subsection{Arbeiten in den letzten 6 Monaten}
 
-- Umsetzung diverser Features für Hitobito (Ruby on Rails)
-- Postgresql Migration Hitobito
+\begin{itemize}
+    \item Umsetzung diverser Features für Hitobito (Ruby on Rails)
+    \item Postgresql Migration Hitobito
+\end{itemize}
 
 \chapter{Firmenstandards}
+
+\section{Code conventions}
+Als Code convention werden die Ruby \href{https://github.com/rubocop/ruby-style-guide}{Style Guides} verwendet. 
+Die Überprüfung dieser Style Guidelines wird mit Rubocop (Formatter) sichergestellt. Die Konfiguration
+dieses Formatters ist unter \href{https://github.com/hitobito/hitobito/blob/master/.rubocop.yml}{rubocop.yml} ersichtlich.
+
+\subsection{Lizenz}
+In jedem File in Hitobito wird das Copyright für den jeweiligen Kunden und die Lizenz dazu
+in Kommentarform beschrieben. Diese Lizenz- sowie Kundeninformationen können über folgenden Befehl 
+eingefügt werden.
+
+\begin{verbatim}
+    rake license:insert
+\end{verbatim}
+    
+Alternativ dazu können diese Informationen mit 
+
+\begin{verbatim}
+    rake license:remove 
+\end{verbatim}
+
+entfernt oder mit 
+
+\begin{verbatim}
+    rake license:update 
+\end{verbatim} aktualisiert werden.
+
+\newpage
+
+\section{Git conventions}
+Für das cloudbasierte Hosting unseres Git-Repositories wird Github verwendet. 
+Die Git Commitnachrichten werden nach den Regeln von Puzzle ITC formuliert. Im Anhang
+unter \hyperref[sec:gitconv]{Git Conventions} finden sie eine Kopie unserer Firmenkonventionen
+
+\begin{itemize}
+    \item Sprache: Englisch
+    \item Kurze und prägnante Message, idealerweise unter 50 Zeichen \href{https://cbea.ms/git-commit/#limit-50}{Details}
+    \item Mit Grossbuchstaben beginnen \href{https://cbea.ms/git-commit/#capitalize}{Details}
+    \item Kein Punkt am Schluss \href{https://cbea.ms/git-commit/#end}{Details}
+    \item Den \textit{imperative mood} (Befehlsform) verwenden, also «Fix bug with X» statt «Fixed bug with X» oder «More fixes for broken stuff» \href{https://cbea.ms/git-commit/#imperative}{Details}
+    \item Wenn vorhanden Ticket referenzieren:
+    \begin{itemize}
+        \item Bei Open Project Work Packages: «Add X, refs \#12345»
+        \item Bei Gitlab/Github Issues: «Add X \#12345»
+    \end{itemize}
+\end{itemize}
+
+\section{Documentation Conventions}
+Als Documentation covention wird arc42 verwendet (Siehe \href{https://arc42.org/documentation/}{arc 42 documentation}). 
+
 
 \chapter{IPA-Schutzbedarfanalyse}
 
