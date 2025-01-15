@@ -1591,6 +1591,12 @@ INPUT journal/tag2.tex
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./journal/tag3.tex
 INPUT journal/tag3.tex
 INPUT ./journal/tag3.tex
@@ -1750,10 +1756,6 @@ INPUT ./bilder//security_conventions_3.png
 INPUT bilder//security_conventions_3.png
 INPUT ./bilder//security_conventions_3.png
 INPUT ./bilder//security_conventions_3.png
-INPUT ./code.tex
-INPUT code.tex
-INPUT ./code.tex
-INPUT code.tex
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
