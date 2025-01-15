@@ -220,6 +220,70 @@ einsehen. Diese Security Conventions umfassen:
 
 \chapter{Organisation der IPA-Ergebnisse}
 
+\section{Datensicherung}
+In dieser IPA unterteilen wir die Datensicherung in:
+
+\begin{itemize}
+\item Dokumentation
+\item Code
+\end{itemize}
+
+\subsection{Dokumentation}
+\begin{table}[h!]
+      \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+          \hline
+          \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Dokumentation}} \\[12pt]
+          \hline
+          Tools & Git und USB \\
+          \hline
+          Versioniert & Ja \\
+          \hline
+          Interval & Mind. 2x täglich \\
+          \hline
+          Beschreibung & Die Dokumentation ist im ipa-puzzle-template Repository unter dem Branch probe-ipa angelegt.
+          Sobald ein Dokumentationsticket abgeschlossen wurde, werden die Änderungen auf den Github Server in das private Repository
+          gepushed. Dies geschieht mind. 2x täglich. Zusätzlich, wird pro Tag ein Ordner auf einem USB-Stick erstellt.  Am Ende des Tages wird eine Kopie der Dokumentation
+          in diesen Ordner geladen. \\
+        \hline
+        \end{tabular}
+        \caption{Sicherung Dokumentation}
+  \end{table}
+
+\newpage
+
+\subsection{Code}
+\begin{table}[h!]
+    \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+        \hline
+        \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Code}} \\[12pt]
+        \hline
+        Tools & Git und USB \\
+        \hline
+        Versioniert & Ja \\
+        \hline
+        Interval & Mind. 2x täglich \\
+        \hline
+        Beschreibung & Für die Entwicklung habe wurden die Repositories hitobito und hitobito\-generic geforked.
+        Auf diesen Repositories wird an Tagen an welchen Entwickelt wird, mind. 2x täglich committed. An diesen Tagen
+        wird zur doppelten Sicherung zusätzlich eine Kopie des Projektes auf den USB Stick gespeichert, unter dem Ordner des jeweiligen Tages. \\
+      \hline
+      \end{tabular}
+      \caption{Sicherung Code}
+\end{table}
+
+\subsection{Wiederherstellung des Codes}
+Gehen die Daten lokal verloren, können diese entweder über das Github Repository oder den USB-Stich wiederhergestellt werden.
+Bei der Wiederherstellung mit Git, wird der SSH-Key des Repositories benötigt, damit dieses von Github geklont werden kann. Ist
+dieser SSH-Key nicht verfügbar, wird die Wiederherstellung über den USB-Stick vorgenommen und das Projekte des letzten Speicherstandes
+kopiert. Im Falle des USB-Sticks sind mit mehr Datenverlusten zu rechnen, falls der Datenverlust gegen Mittag oder Nachmittag auftritt, da
+die Speicherung erst am Ende des Tages erfolgt. Aus diesem Grund ist die Datenwiederherstellung mit Git zu bevorzugen.
+
+Die Nachweise für die jeweiligen Datensicherungen finden sie im Anhang unter: TODO(Screenshots in Anhang einfügen)
+\begin{itemize}
+    \item \hyperref[sec:savusb]{USB-Sicherung}
+    \item \hyperref[sec:savgit]{Git-Sicherung}
+\end{itemize}
+
 \chapter{Projektmethode}
 Die verwendete Projektmethode dieser IPA ist SCRUM. Abweichungen und Werkzeuge welcher der Umsetzung
 dieser IPA nach SCRUM verwendet werden, sind im folgenden Abschnitt beschrieben.
