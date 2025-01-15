@@ -35,52 +35,55 @@
 \contentsline {section}{\numberline {5.4}Daily}{18}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Verwendungsgrund}{18}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Projektaufbauorganisation}{19}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zeitplan}{20}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Erläuterung zum Zeitplan}{20}{section.7.1}%
-\contentsline {chapter}{\numberline {8}Arbeitsjournale}{21}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Tag 1: 14.01.2025}{21}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Tag 2: TODO: Datum}{24}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Tag 4: TODO: Datum}{25}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Tag 1: TODO: Datum}{26}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Tag 5: TODO: Datum}{27}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Tag 6: TODO: Datum}{28}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Tag 7: TODO: Datum}{29}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Tag 8: TODO: Datum}{30}{section.8.8}%
-\contentsline {section}{\numberline {8.9}Tag 9: TODO: Datum}{31}{section.8.9}%
-\contentsline {section}{\numberline {8.10}Tag 10: TODO: Datum}{32}{section.8.10}%
-\contentsline {chapter}{\numberline {9}Persönliches Fazit}{33}{chapter.9}%
-\contentsline {part}{II\hspace {1em}Projektdokumentation}{34}{part.2}%
-\contentsline {chapter}{\numberline {10}Einführung}{35}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Analyse}{36}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Ist-Zustand}{36}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Soll-Zustand}{36}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Persönliche Vorgehensziele}{36}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Anforderungen}{36}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Nicht funktionale Anforderungen}{36}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}Funktionale Anforderungen}{36}{subsection.11.4.2}%
-\contentsline {section}{\numberline {11.5}Abgrenzung}{36}{section.11.5}%
-\contentsline {chapter}{\numberline {12}Entwurf}{37}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Lösungsvarianten}{37}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Variantenentscheid}{37}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Ausarbeitung}{37}{section.12.3}%
-\contentsline {chapter}{\numberline {13}Ausführung}{38}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Testprotokoll}{38}{section.13.1}%
-\contentsline {chapter}{\numberline {14}Einführung}{39}{chapter.14}%
-\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{40}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{40}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{40}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{40}{section.15.3}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{41}{part.3}%
-\contentsline {chapter}{\numberline {16}Verzeichnise}{42}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{42}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{42}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Code Verzeichnis}{42}{section.16.3}%
-\contentsline {subsection}{Quellenverzeichnis}{43}{chapter*.85}%
-\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{44}{chapter.17}%
-\contentsline {chapter}{\numberline {18}Glossar}{45}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Anhänge}{46}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{46}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Git commit convention}{46}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Security conventions}{46}{section.19.3}%
-\contentsline {section}{\numberline {19.4}Code}{47}{section.19.4}%
+\contentsline {section}{\numberline {6.1}Projektrollen in Scrum}{19}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Projektrollen IPA}{20}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Rollenverteilung}{21}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Zeitplan}{22}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Erläuterung zum Zeitplan}{22}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Arbeitsjournale}{23}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Tag 1: 14.01.2025}{23}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Tag 2: TODO: Datum}{26}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Tag 4: TODO: Datum}{27}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Tag 1: TODO: Datum}{28}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Tag 5: TODO: Datum}{29}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Tag 6: TODO: Datum}{30}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Tag 7: TODO: Datum}{31}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Tag 8: TODO: Datum}{32}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Tag 9: TODO: Datum}{33}{section.8.9}%
+\contentsline {section}{\numberline {8.10}Tag 10: TODO: Datum}{34}{section.8.10}%
+\contentsline {chapter}{\numberline {9}Persönliches Fazit}{35}{chapter.9}%
+\contentsline {part}{II\hspace {1em}Projektdokumentation}{36}{part.2}%
+\contentsline {chapter}{\numberline {10}Einführung}{37}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Analyse}{38}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Ist-Zustand}{38}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Soll-Zustand}{38}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Persönliche Vorgehensziele}{38}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Anforderungen}{38}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Nicht funktionale Anforderungen}{38}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Funktionale Anforderungen}{38}{subsection.11.4.2}%
+\contentsline {section}{\numberline {11.5}Abgrenzung}{38}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Entwurf}{39}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Lösungsvarianten}{39}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Variantenentscheid}{39}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Ausarbeitung}{39}{section.12.3}%
+\contentsline {chapter}{\numberline {13}Ausführung}{40}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Testprotokoll}{40}{section.13.1}%
+\contentsline {chapter}{\numberline {14}Einführung}{41}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{42}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{42}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{42}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{42}{section.15.3}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{43}{part.3}%
+\contentsline {chapter}{\numberline {16}Verzeichnise}{44}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{44}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{44}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Code Verzeichnis}{44}{section.16.3}%
+\contentsline {subsection}{Quellenverzeichnis}{45}{chapter*.90}%
+\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{46}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Glossar}{47}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Anhänge}{48}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{48}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Git commit convention}{48}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Security conventions}{48}{section.19.3}%
+\contentsline {section}{\numberline {19.4}Code}{49}{section.19.4}%
 \contentsfinish 
