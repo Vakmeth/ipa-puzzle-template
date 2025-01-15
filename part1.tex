@@ -163,19 +163,9 @@ unter \hyperref[sec:gitconv]{Git Conventions} finden sie eine Kopie unserer Firm
 \section{Documentation Conventions}
 Als Documentation covention wird arc42 verwendet (Siehe \href{https://arc42.org/documentation/}{arc 42 documentation}). 
 
-\chapter{IPA-Schutzbedarfanalyse}
+\newpage
 
-\section{Datensicherheit}
-Die notwendigen Daten welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
-sind werden durch das \href{https://github.com/faker-ruby/faker}{Faker-Gem} generiert und sind somit NICHT 
-besonders schützenswert. Dazu gehören unter anderem Adressen, Familiendaten, Finanzdaten.
-
-\section{Applikationssicherheit}
-
-Da keine besonders schützenswerte Daten verwendet werden, werden die Standards von
-Puzzle ITC nach Firmen-Sicherheitsbuch verwendet. Sie können dieses unter \hyperref[sec:secconv]{Security Conventions}
-einsehen. Diese Security Conventions umfassen:
-
+\section{Security Conventions}
 \begin{itemize}
     \item{Injection / Cross Size Scripting}
     \begin{itemize}
@@ -191,8 +181,6 @@ einsehen. Diese Security Conventions umfassen:
         \item{Cookie Flags secure, httpOnly und SameSite setzen}
         \item{Kein Caching von sensiblen Informationen}
     \end{itemize}
-
-    \newpage
 
     \item Authentication / Sessions
     \begin{itemize}
@@ -217,6 +205,19 @@ einsehen. Diese Security Conventions umfassen:
         \item{Alle verwendeten Images sollten auf Schwachstellen gescannt werden}
     \end{itemize}
 \end{itemize}
+
+\chapter{IPA-Schutzbedarfanalyse}
+
+\section{Datensicherheit}
+Die notwendigen Daten welche im Rahmen der IPA zu Test- und Vorführungszwecken verwendet werden,
+sind werden durch das \href{https://github.com/faker-ruby/faker}{Faker-Gem} generiert und sind somit NICHT 
+besonders schützenswert. Dazu gehören unter anderem Adressen, Familiendaten, Finanzdaten.
+
+\section{Applikationssicherheit}
+Obwohl im Rahmen der IPA nicht mit besonders schützenswerten Daten gearbeitet muss bei der Programmierung beachtet werden,
+dass bei den Filterungen stets auf ein Datenset zugegriffen wird welches durch das can-can-can-Gem validiert wurde um zu
+Verhindern dass Personen auf die Daten anderer Zugriff haben. Dies ist wichtig, da sich bei späterer Implementierung der IPA in 
+Hitobito besonders Schützenswerte Daten in der Datenbank befinden.
 
 \chapter{Organisation der IPA-Ergebnisse}
 
