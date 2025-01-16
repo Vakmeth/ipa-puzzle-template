@@ -54,8 +54,8 @@ Es wird definiert wo sich die IPA abgrenzt.
 Aktuell kann ein Nutzer über den Button Neuer-Filter auf die Filter Seite navigieren. 
 \begin{figure}[h]
    \centering
-   \includegraphics[width=1\textwidth,]{hitobito_header.drawio.png}
-   \caption{Sequenzdiagramm Personenlisten Filter}
+   \fbox{\includegraphics[width=1\textwidth,]{hitobito_header.drawio.png}}
+   \caption{Hitobito Personenlisten Filtererstellung}
 \end{figure}
 
 \newpage 
@@ -64,16 +64,16 @@ Auf dieser definiert er die Filterungskriterien für die Attribute Rollen, Quali
 Felder, Sprache und Tags. 
 \begin{figure}[h]
    \centering
-   \includegraphics[width=1\textwidth,]{hitobito_person_list_filter.drawio.png}
-   \caption{Sequenzdiagramm Personenlisten Filter}
+   \fbox{\includegraphics[width=1\textwidth,]{hitobito_person_list_filter.drawio.png}}
+   \caption{Hitobito Personenlisten Filterkriterien}
 \end{figure}
 
 Anschliessend ist es dem Nutzer möglich seinen Filter über einen Button für die Wiederverwendung
 zu speichern.
 \begin{figure}[h]
    \centering
-   \includegraphics[width=1\textwidth,]{save_filter.drawio.png}
-   \caption{Sequenzdiagramm Personenlisten Filter}
+   \fbox{\includegraphics[width=1\textwidth,]{save_filter.drawio.png}}
+   \caption{Hitobito Personenlistenfilter Speicherung}
 \end{figure}
 
 \newpage
@@ -100,10 +100,78 @@ Technisch sind die Personenlisten-Filter nach folgendem Sequenzdiagramm aufgebau
      \caption{Beschreibung Sequenzdiagramm}
 \end{table}
 
-\subsection{Abonnemente}
+\newpage
 
+\subsection{Abonnemente}
+Auf den Abonnementen kann der Nutzer Filterkriterien in den globalen Bedingungen definieren.
+
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{hitobito_global_conditions.drawio.png}}
+   \caption{Hitobito Globale Bedingungen}
+\end{figure}
+
+Unter diesen kann der Nutzer per Dropdown entscheiden für welche Attribute er die Filterkriterien definieren möchte.
+Er kann auch bereits gesetzte Kriterien entfernen. Pro Filterkriterium entscheidet er im weiteren, mit welcher Genauigkeit
+nach diesem Filterkriterium gesucht wird. Bei Zahlen ist es möglich die Genauigkeiten ist genau, ist höher als und ist kleiner als 
+einzustellen. Bei Textvergleichen sind es ist genau, enthält, enthält nicht.
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{hitobito_filter_conditions.drawio.png}}
+   \caption{Hitobito Filterkriterien}
+\end{figure}
+
+\newpage
+
+Hat der Nutzer seine Filterkriterien und die dazugehörigen Genauigkeiten definiert, kann er sie über den
+Speicher-Button persistieren. Im Anschluss werden die ausgewählten Filterkriterien in den Globalen Bedingungen angezeigt
+und ein Success-Alert ausgelöst der die Aktualisierung bestätigt.
+\begin{figure}[h]
+   \centering
+   \fbox{\includegraphics[width=1\textwidth,]{hitobito_filter_created.drawio.png}}
+   \caption{Hitobito Filterkriterien}
+\end{figure}
+
+Technisch haben sind die Abonnemente nach folgendem ERD aufgebaut.
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{subscriptions_erd.drawio.png}
+   \caption{Hitobito Subscription ERD}
+\end{figure}
+
+Es ist zu beachten: Eine Person kann mehrere Subscriptions besitzen und jede Subscriptions ist einer
+Mailling list zugerodnet. Somit muss bei der Filterung nach Subscriptions zuerst die MaillingList included
+werden, damit man auf dieser danach die Filterung ausführen kann.
+
+\newpage
+
+Die Globalen Filterungskriterien für die Abonnemente werden in dem Modell der MaillingList
+abgespeichert. Dadurch ergibt sich folgendes Sequenzdiagramm.
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{subscriptions_filter.drawio.png}
+   \caption{Hitobito Abonnementen Sequenzdiagramm}
+\end{figure}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Beschreibung Sequenzdiagramm}} \\[12pt]
+       \hline
+       SubscriptionController & Der SubscriptionController nimmt den Request des Benutzers entgegen und erwidert die gefilterten und sortierten Personen auf welche der Benutzer zugreifen darf. \\
+       \hline
+       MaillingList & Fetcht Subscriptions aus der Datenbank und macht Aufruf zum MaillingList::Filter::Chain \\
+       \hline
+       MaillingList::Filter::Chain & Holt die Filterkriterien aus der Datenbank und filtered die Subscriptions danach aus. \\
+       \hline
+     \end{tabular}
+     \caption{Beschreibung Sequenzdiagramm}
+\end{table}
 
 \section{Soll-Zustand}
+Das neue Konzept für die Abonnementen- und Personenlistenfilterung soll durch den gleichen Prozess laufen. 
+Die beiden Filterungsprozesse sollen dabei zu einem homogenisiert werden und trotzdem die gleichen Funktionalitäten bieten.
+Bestehende Datenmodelle sollen ebenfalls fusioniert werden.
 
 \section{Persönliche Vorgehensziele}
 
