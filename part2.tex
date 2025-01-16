@@ -44,8 +44,64 @@ maximale Effizienz für diese Personen zu garantieren. Durch eine Vereinfachung 
 Richtung.
 
 \chapter{Analyse}
+In der Analyse der IPA wird der Rahmen geschaffen in welchem man später während des Implementierens arbeitet. 
+Sie befasst sich mit der Aufnahme von Ist- und Zielzustand und definierte Funktionale sowie nicht funktionale Anforderungen.
+Es wird definiert wo sich die IPA abgrenzt. 
 
 \section{Ist-Zustand}
+
+\subsection{Personenlisten}
+Aktuell kann ein Nutzer über den Button Neuer-Filter auf die Filter Seite navigieren. 
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_header.drawio.png}
+   \caption{Sequenzdiagramm Personenlisten Filter}
+\end{figure}
+
+\newpage 
+
+Auf dieser definiert er die Filterungskriterien für die Attribute Rollen, Qualifikationen,
+Felder, Sprache und Tags. 
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_person_list_filter.drawio.png}
+   \caption{Sequenzdiagramm Personenlisten Filter}
+\end{figure}
+
+Anschliessend ist es dem Nutzer möglich seinen Filter über einen Button für die Wiederverwendung
+zu speichern.
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{save_filter.drawio.png}
+   \caption{Sequenzdiagramm Personenlisten Filter}
+\end{figure}
+
+\newpage
+
+Technisch sind die Personenlisten-Filter nach folgendem Sequenzdiagramm aufgebaut:
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{person_filter.png}
+   \caption{Sequenzdiagramm Personenlisten Filter}
+\end{figure}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.5\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Beschreibung Sequenzdiagramm}} \\[12pt]
+       \hline
+       PeopleController & Der PeopleController nimmt den Request des Benutzers entgegen und erwidert die gefilterten und sortierten Personen auf welche der Benutzer zugreifen darf. \\
+       \hline
+       Person::Filter::List & Personen auf welche der Benutzer keinen Zugriff hat werden rausgefiltert und anschliessend sortiert. \\
+       \hline
+       Person::Filter::Chain & Definiert anhand der Request Parameter vom Controller die Filter und wendet diese in einem Loop via chain-pattern an. \\
+       \hline
+     \end{tabular}
+     \caption{Beschreibung Sequenzdiagramm}
+\end{table}
+
+\subsection{Abonnemente}
+
 
 \section{Soll-Zustand}
 
