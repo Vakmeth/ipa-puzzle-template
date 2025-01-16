@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  15 JAN 2025 13:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  16 JAN 2025 08:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1781,9 +1781,14 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 ]
 Kapitel 10.
+<bilder//puzzle-house.png, id=750, 983.675pt x 554.07pt>
+File: bilder//puzzle-house.png Graphic file (type png)
+<use bilder//puzzle-house.png>
+Package pdftex.def Info: bilder//puzzle-house.png  used on input line 17.
+(pdftex.def)             Requested size: 400.0pt x 225.30174pt.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 11.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 33.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1797,11 +1802,10 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 [39
 
-]
-Kapitel 11.
+ <./bilder//puzzle-house.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 26.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 46.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1813,13 +1817,11 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[40
-
-]
-Kapitel 12.
+[40]
+Kapitel 11.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 34.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 61.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1834,16 +1836,10 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 [41
 
 ]
-Kapitel 13.
-(./testprotokoll.tex
-Overfull \hbox (5.19876pt too wide) in paragraph at lines 7--26
-[][] 
- []
-
-)
+Kapitel 12.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 38.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 69.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1858,10 +1854,16 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 [42
 
 ]
-Kapitel 14.
+Kapitel 13.
+(./testprotokoll.tex
+Overfull \hbox (5.19876pt too wide) in paragraph at lines 7--26
+[][] 
+ []
+
+)
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 40.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 73.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -1874,6 +1876,24 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  []
 
 [43
+
+]
+Kapitel 14.
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 75.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[44
 
 ]
 Kapitel 15.
@@ -1892,7 +1912,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[44
+[45
 
 ]
 \openout2 = `part3.aux'.
@@ -1912,7 +1932,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[45
+[46
 
 
 
@@ -1945,9 +1965,24 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[46
+[47
 
 ]
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 19.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 [][][]$\OT1/zi4/m/n/12 TODO : URLeinf \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 protect \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 unhbox \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 voidb @ x \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 bgroup \OMS/lmsy/m/n/12 n
  []
@@ -1971,7 +2006,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[47
+[49
 
 ]
 Kapitel 17.
@@ -1989,7 +2024,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[48
+[50
 
 ]
 Kapitel 18.
@@ -2007,11 +2042,11 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[49
+[51
 
 ]
 Kapitel 19.
-<bilder//git_commit_conventions.png, id=834, 1030.85126pt x 500.87125pt>
+<bilder//git_commit_conventions.png, id=846, 1030.85126pt x 500.87125pt>
 File: bilder//git_commit_conventions.png Graphic file (type png)
 <use bilder//git_commit_conventions.png>
 Package pdftex.def Info: bilder//git_commit_conventions.png  used on input line 60.
@@ -2021,7 +2056,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-<bilder//security_conventions_1.png, id=835, 2570.60374pt x 996.72375pt>
+<bilder//security_conventions_1.png, id=847, 2570.60374pt x 996.72375pt>
 File: bilder//security_conventions_1.png Graphic file (type png)
 <use bilder//security_conventions_1.png>
 Package pdftex.def Info: bilder//security_conventions_1.png  used on input line 68.
@@ -2031,7 +2066,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
-<bilder//security_conventions_2.png, id=836, 2570.60374pt x 1287.81125pt>
+<bilder//security_conventions_2.png, id=848, 2570.60374pt x 1287.81125pt>
 File: bilder//security_conventions_2.png Graphic file (type png)
 <use bilder//security_conventions_2.png>
 Package pdftex.def Info: bilder//security_conventions_2.png  used on input line 73.
@@ -2044,7 +2079,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<bilder//security_conventions_3.png, id=837, 2570.60374pt x 550.055pt>
+<bilder//security_conventions_3.png, id=849, 2570.60374pt x 550.055pt>
 File: bilder//security_conventions_3.png Graphic file (type png)
 <use bilder//security_conventions_3.png>
 Package pdftex.def Info: bilder//security_conventions_3.png  used on input line 78.
@@ -2072,7 +2107,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[50
+[52
 
  <./bilder//git_commit_conventions.png> <./bilder//security_conventions_1.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -2089,28 +2124,28 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[51 <./bilder//security_conventions_2.png> <./bilder//security_conventions_3.png>] 
+[53 <./bilder//security_conventions_2.png> <./bilder//security_conventions_3.png>] 
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ipa.out' has not changed.
-(rerunfilecheck)             Checksum: 3F49D0FC3D28B24721490A4453867FE2;12510.
+(rerunfilecheck)             Checksum: 1A91AAA3FEF6701508D864ED4E012081;12510.
  ) 
 Here is how much of TeX's memory you used:
- 31670 strings out of 478287
- 599323 string characters out of 5849289
+ 31687 strings out of 478287
+ 599651 string characters out of 5849289
  1178157 words of memory out of 5000000
- 48943 multiletter control sequences out of 15000+600000
+ 48956 multiletter control sequences out of 15000+600000
  525055 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,16n,129p,737b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,16n,129p,737b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
-Output written on ipa.pdf (52 pages, 784973 bytes).
+Output written on ipa.pdf (54 pages, 942115 bytes).
 PDF statistics:
- 951 PDF objects out of 1000 (max. 8388607)
- 836 compressed objects within 9 object streams
- 236 named destinations out of 1000 (max. 500000)
- 752 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 963 PDF objects out of 1000 (max. 8388607)
+ 844 compressed objects within 9 object streams
+ 239 named destinations out of 1000 (max. 500000)
+ 757 words of extra memory for PDF output out of 10000 (max. 10000000)
 
