@@ -1604,6 +1604,9 @@ INPUT journal/tag3.tex
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
+INPUT bilder//puzzle_tagline_blau.png
+INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./journal/tag4.tex
 INPUT journal/tag4.tex
 INPUT ./journal/tag4.tex
