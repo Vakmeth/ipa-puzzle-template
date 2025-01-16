@@ -426,6 +426,8 @@ Aus dem Anwendungsdiagram werden die 4 Use-Cases entnommen und hier im Detail be
    \caption{Anwendungsfall: Personen filtern}
 \end{table}
 
+\newpage
+
 \begin{table}[h!]
    \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
       \hline
@@ -452,11 +454,63 @@ Aus dem Anwendungsdiagram werden die 4 Use-Cases entnommen und hier im Detail be
 \end{table}
 
 \newpage
-\newpage
 
 \section{Systemkonzept}
+Bei dieser Arbeit wird mit einem bestehenden System gearbeitet, dieses muss entsprechend angepasst werden. 
+Um die nötigen Anpassungen besser sichtbar zu machen, wird im folgenden Abschnitt gezeigt, welche Services von den 
+Anpassungen betroffen, was der aktuelle Stand der Logik und was mögliche Konzepte für die Erweiterung sind. Danach wird aufgrund
+eines Variantenentscheids eine Lösungsvariante ausgearbeitet und als Plan für das PoC definiert.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_systemarchitektur.drawio.png}
+   \caption{Services}
+\end{figure}
+
 \subsection{Betroffene Services}
+Hitobito wird hauptsächlich in zwei Services unterteilt, der Rails Applikation und der Postgres Datenbank.
+
+\textbf{Rails Applikation / Webserver}
+
+Die Rails Applikation verwaltet die Business Logik von Hitobito. Die Änderungen / Erweiterugnen dieser Arbeit
+werden alle in diesem Service vorgenommen. Je nach Kunde werden hier Code Teile aus den definierten Wagons verwendet.
+In dieser Arbeit wird jedoch ausschliesslich der Core und der Generic Wagon angepasst.
+
+\textbf{Postgres Datenbank}
+
+Die Datenbank von Hitobito läuft auf Postgres. Sämtliche Abfragen auf die Postgres Datenbank werden via SQL-Queries
+gemacht. Active Records is das ORM (Object Relational Mapping) welches verwendet wird.
+
+\newpage
+
 \subsection{Status quo}
+
+\textbf{Personlistfilter}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobtio_personlist_filter_classstructure.drawio.png}
+   \caption{Klassenstruktur Personenlistenfilter}
+\end{figure}
+
+In der Abbildung oben ist die Klassenstruktur der Personenlistenfilterlogik zu sehen. Wenn der Benutzer einen Filter-Request
+absetzt trifft dieser erstmals auf die \texttt{index} Methode im PeopleController. In dieser ruft der Controller klassenintern die Methode
+\texttt{person\_filter} auf. Darin wird eine neue Instanz der \texttt{Person\:\:Filter\:\:List} erstellt und die Filterparameter übergeben.
+Die Parameter werden über die Methode \texttt{list\_filter\_args} geholt. Wurde schon ein Fitler abgespeichert, holt sich die Methode
+die persistierte Instanz der \texttt{PeopleFilter} Klasse und zieht die Parameter aus dem Attribut \texttt{filters}. Ist noch kein Fitler definiert
+übergibt die Methode die Parameter des Requests der Instanz. 
+
+Die \texttt{Person\:\:Filter\:\:List} sorgt mit \texttt{filtered\_acessibles} dafür das nur Daten zurückommen, auf welche der Benutzer
+Zugriff hat. Die Methode \texttt{filter} ruft intern eine Instanz von \texttt{Person\:\:Filter\:\:Chain} auf und gibt mit durch die Methode \texttt{filter} die
+gefilterten Daten zurück.
+
+Um diese Chain später in dem PeopleFilter model zu speichern, überschreibt die Klasse \texttt{Person\:\:Filter\:\:Chain} die \texttt{load} und \texttt{dump} Methode
+von Active Rails, um später die Filter Parameter selbständig in einen Hash zu transformieren.
+
+\newpage
+
+\textbf{}
+
 \subsection{Lösungsvarianten}
 \subsection{Variantenentscheid}
 \subsection{Ausarbeitung}
