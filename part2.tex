@@ -343,7 +343,7 @@ daraus entstehen.
 
 
 \subsection{Anwendungsdiagram}
-Es bilden sich 6 konkrete Use-Cases:
+Es bilden sich 4 konkrete Use-Cases:
 \begin{figure}[h]
    \centering
    \includegraphics[width=0.85\textwidth,]{hitobito_use_case_diagram.drawio.png}
@@ -352,6 +352,107 @@ Es bilden sich 6 konkrete Use-Cases:
 
 
 \subsection{Anwendungsfälle}
+Aus dem Anwendungsdiagram werden die 4 Use-Cases entnommen und hier im Detail beschrieben.
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Filter speichern}} \\[4pt]
+       \hline
+       Kurzbeschreibung & Der Benutzer kann die ausgewählten Fitlerkriterien speichern. \\
+       \hline
+       Vorbedingungen & 
+       \begin{itemize}
+         \item Der Benutzer besitzt die nötigen Rechte um eine Filter zu erstellen
+         \item Mind. ein Filterkriterium wurde ausgewählt
+       \end{itemize} \\
+       \hline
+       Ablauf & \begin{enumerate}
+         \item Benutzer benennt den Filter, optional und nur bei Personenliste
+         \item Benutzer klickt auf speichern
+       \end{enumerate}  \\
+       \hline
+       Resultat & Der Filter wurde in der Datenbank persistiert und ein Success-Alert wird ausgegeben. \\
+       \hline
+   \end{tabular}
+   \caption{Anwendungsfall: Filter speichern}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Filterkriterien anzeigen}} \\[4pt]
+      \hline
+      Kurzbeschreibung & Der Benutzer kann die Filterkriterien der gespeicherten Filter einsehen. \\
+      \hline
+      Vorbedingungen & 
+      \begin{itemize}
+         \item Der Benutzer hat einen Filter gespeichert
+      \end{itemize}  \\
+      \hline
+      Ablauf & \begin{enumerate}
+      \item Navigiert zum Filter
+      \end{enumerate}  \\
+      \hline
+      Resultat & Die Filterkriterien werden dem Benutzer angezeigt. \\
+      \hline
+   \end{tabular}
+   \caption{Anwendungsfall: Filterkriterien anzeigen}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Personen filtern}} \\[4pt]
+      \hline
+      Kurzbeschreibung & Der Benutzer kann die definierten Personenlistenfilter auf eine Liste von Personen 
+      anwenden. \\
+      \hline
+      Vorbedingungen & \begin{itemize}
+         \item Benutzer besitzt Rechte um auf eine Personenliste zuzugreifen
+         \item Benutzer hat einen Personenlistenfilter für diese Liste gespeichert
+         \end{itemize}  \\
+      \hline
+      Ablauf & \begin{enumerate}
+      \item Benutzer Navigiert zum Personenlistenfilter
+      \item Benutzer klickt auf Filternamen
+      \end{enumerate}  \\
+      \hline
+      Resultat & Die Personen in der Personenliste werden gefiltert und dem Benutzer angezeigt. \\
+      \hline
+   \end{tabular}
+   \caption{Anwendungsfall: Personen filtern}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Gefilterte Abonnemente exportieren}} \\[4pt]
+      \hline
+      Kurzbeschreibung & Der Benutzer kann die Abonnemente als PDF, CSV, Excel, etc. exportieren, dabei werden
+      die gesetzten Abonnementenfilter auf diesen Export angewendet. \\
+      \hline
+      Vorbedingungen & \begin{itemize}
+         \item Benutzer hat Rechte um Abonnemente zu bearbeiten
+         \item Benutzer hat einen Abonnementenfilter gespeichert
+         \end{itemize}  \\
+      \hline
+      Ablauf & \begin{enumerate}
+      \item Benutzer zum Abonnementenfilter
+      \item Benutzer wählt Zieldatei aus Dropdown aus
+      \item Benutzer exportiert Abonnementenliste
+      \end{enumerate}  \\
+      \hline
+      Resultat & Die Personen in der Personenliste werden gefiltert und dem Benutzer angezeigt. \\
+      \hline
+   \end{tabular}
+   \caption{Anwendungsfall: Gefilterte Abonnemente exportieren}
+\end{table}
+
+\newpage
+\newpage
 
 \section{Systemkonzept}
 \subsection{Betroffene Services}
