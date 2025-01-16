@@ -231,18 +231,139 @@ Bestehende Datenmodelle sollen ebenfalls fusioniert werden.
 
 \section{Anforderungen}
 \subsection{Nicht funktionale Anforderungen}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Erweiterbarkeit, NfA. 1}} \\[4pt]
+       \hline
+       Beschreibung & Bei der Implementation der neuen Filterlogik wird beachtet, dass zukünftig weitere
+       Filterkriterien oder Genauigkeiten vom Kunden gewünscht werden können. \\
+       \hline
+       Messbarkeit & Die Implementation wurde nachhaltig umgesetzt und bietet Möglichkeiten zur Erweiterung.  \\
+       \hline
+     \end{tabular}
+     \caption{Erweiterbarkeit}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Performance, NfA. 2}} \\[4pt]
+       \hline
+       Beschreibung & Die Implementation des neuen Filterungskonzeptes soll die gleiche
+       Leistungsfähigkeit wie die jetztige Implementation vorweisen. \\
+       \hline
+       Messbarkeit & Ladezeit der Personenlisten und Abonnemente bleibt gleich.  \\
+       \hline
+     \end{tabular}
+     \caption{Performance}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Security, NfA. 3}} \\[4pt]
+       \hline
+       Beschreibung & Filterungen sollen auf dem Datensatz gemacht werden, welche durch das can-can-can
+       Gem verfiziert hat. \\
+       \hline
+       Messbarkeit & Nutzer können keine Daten einsehen, auf welche sie keine Berechtigungen haben.  \\
+       \hline
+     \end{tabular}
+     \caption{Security}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{DRY, NfA. 4}} \\[4pt]
+       \hline
+       Beschreibung & Der Code wurde nach dem DRY (Don't Repeat Yourself) Prinzip implementiert. \\
+       \hline
+       Messbarkeit & Es finden sich keine doppelten Klasse oder unnötige Wrapper.  \\
+       \hline
+     \end{tabular}
+     \caption{DRY}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Dokumentation, NfA. 5}} \\[4pt]
+       \hline
+       Beschreibung & Code wurde dokumentiert. \\
+       \hline
+       Messbarkeit & Codingfiles sind mit verständlichen Kommentaren versehen.  \\
+       \hline
+     \end{tabular}
+     \caption{Dokumentation}
+\end{table}
  
 \subsection{Funktionale Anforderungen}
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Konzept, fA. 1}} \\[4pt]
+       \hline
+       Beschreibung & Das erstellte Konzept führt beide Filterprozesse zusammen. \\
+       \hline
+       Messbarkeit & Es gibt im Hitobito ein homogenisierter Fitlerprozess der für weiter Filterungen
+       wiederverwendet werden kann.  \\
+       \hline
+     \end{tabular}
+     \caption{Konzept}
+\end{table}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.3\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Filterkriterien, fA. 2}} \\[4pt]
+       \hline
+       Beschreibung & Alle bisherigen Filterungskriterien werden weiterhin unterstützt. \\
+       \hline
+       Messbarkeit & UI ist immer noch gleich bedienbar wie vor der IPA.  \\
+       \hline
+     \end{tabular}
+     \caption{Filterkriterien, fA. 2}
+\end{table}
 
 \section{Abgrenzung}
+
+Während der IPA wird auf einem geforkten Repository gearbeitet, sowohl im Hitobito Core-Wagen wie auch
+im Generic Wagon. Jeglich Commits und Push erfolgen auf den Master Branch des geforkten Repositories. Durch diese 
+Abkapselung wird sichergestellt das die Weiterentwicklung von Hitobito nicht den Erfolg dieser IPA gefährden. 
  
 \chapter{Entwurf}
+\section{Anwendungskonzept}
+Das Anwendungskonzept beschreibt wie ein Benutzer die Funktionalität dieser Arbeit verwendet und welche Anwendungsfälle
+daraus entstehen.
 
-\section{Lösungsvarianten}
 
-\section{Variantenentscheid}
+\subsection{Anwendungsdiagram}
+Es bilden sich 6 konkrete Use-Cases:
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.85\textwidth,]{hitobito_use_case_diagram.drawio.png}
+   \caption{Hitobito Filter Use Case Diagramm}
+\end{figure}
 
-\section{Ausarbeitung}
+
+\subsection{Anwendungsfälle}
+
+\section{Systemkonzept}
+\subsection{Betroffene Services}
+\subsection{Status quo}
+\subsection{Lösungsvarianten}
+\subsection{Variantenentscheid}
+\subsection{Ausarbeitung}
+
+\section{Sicherheitskonzept}
+\section{Fehlerbehandlungskonzept}
+\section{Migrationskonzept}
+\section{Testkonzept}
 
 \chapter{Ausführung}
 
