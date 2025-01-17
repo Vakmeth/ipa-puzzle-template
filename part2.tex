@@ -497,7 +497,7 @@ In der Abbildung oben ist die Klassenstruktur der Personenlistenfilterlogik zu s
 absetzt trifft dieser erstmals auf die \texttt{index} Methode im PeopleController. In dieser ruft der Controller klassenintern die Methode
 \texttt{person\_filter} auf. Darin wird eine neue Instanz der \texttt{Person\:\:Filter\:\:List} erstellt und die Filterparameter übergeben.
 Die Parameter werden über die Methode \texttt{list\_filter\_args} geholt. Wurde schon ein Fitler abgespeichert, holt sich die Methode
-die persistierte Instanz der \texttt{PeopleFilter} Klasse und zieht die Parameter aus dem Attribut \texttt{filters}. Ist noch kein Fitler definiert
+die persistierte Instanz der \texttt{PeopleFilter} Klasse und zieht die Parameter aus dem Attribut \texttt{filters}. Ist noch kein Filter definiert
 übergibt die Methode die Parameter des Requests der Instanz. 
 
 Die \texttt{Person\:\:Filter\:\:List} sorgt mit \texttt{filtered\_acessibles} dafür das nur Daten zurückommen, auf welche der Benutzer
@@ -509,7 +509,26 @@ von Active Rails, um später die Filter Parameter selbständig in einen Hash zu 
 
 \newpage
 
-\textbf{}
+\textbf{Abonnementenfilter}
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_subscription_filter.drawio.png}
+   \caption{Klassenstruktur Personenlistenfilter}
+\end{figure}
+
+In der Klassenstruktur des Abonnementenfilters trifft ein Request des Benutzers zuerst auf die \texttt{index} Action im SubscriptionController. 
+Danach wird \texttt{fetch\_person\_add\_request} aufgerufen welche auf die MailingListe zugreift um die \texttt{add\_requests} zu fetchen. Danach wird durch
+die Methode \texttt{load\_grouped\_subscriptions} die einzelnen subscribers geladen. Diese werden dann in der Filterungsansicht angezeigt. 
+
+Die Filterung selbst wird nur beim Export von Abonnementen gemacht. Wenn der Benutzer ein CSV der Abonnemente herunterlädt, trifft der Request wieder auf die
+\texttt{index} Action im SubscriptionController. Als nächstes wird durch die Methode \texttt{render\_tabular\_in\_background} ein weiterer Aufruf zur 
+\texttt{with\_async\_download\_cookie} Methode gemacht, welche sich im Module \texttt{AsyncDownload} befindet. Diese Methdoe lädt das CSV herunter. 
+Die Daten dafür bekommt die Methode vom \texttt{Export\:\:SubscriptionsJob} welcher mit der Methode \texttt{entries} die MailingListe aufruft und 
+darin durch die Methode \texttt{people} eine Instanz der Klasse \texttt{MailingLists::Subscribers} erstellt. Die Klasse 
+holt sich durch \texttt{people\_as\_configured} die gefilterten Abonnemente. Die Filterung geschieht durch einen Call zurück zur Mailingliste welche
+dann durch die \texttt{filter\_chain} Methode die Klasse \texttt{MailingLists::Filter::Chain} aufruft. Die Filterung funktioniert von hier an ähnlich wie
+bei den Personenlisten, da \texttt{MailingLists::Filter::Chain} von {Person::Filter::Chain} erbt. Mit den gefilterten Abonnementen wird \texttt{scope} aufgerufen
+welches schlussendlich doppelte Abonnemente entfernt und zurückgibt. Anhand der gefetchten Daten kann der CSV Export vom \texttt{AsyncDownload} Modul abgeschlossen werden.
 
 \subsection{Lösungsvarianten}
 \subsection{Variantenentscheid}
