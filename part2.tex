@@ -717,7 +717,28 @@ bietet die Möglichkeit zum Wissensausbau, kann schnell eingeführt werden und w
 
 \newpage
 
-\subsection{Ausarbeitung}
+\begin{landscape}
+   \subsection{Ausarbeitung}
+   Im Diagramm unten ist die augearbeitete Klassenstruktur zu sehen. Alles was grün markiert ist, wurde neu
+   hinzugefügt oder erweitert, alles was rot ist wurde entfernt. Es wird ein neues Modul geben, das \texttt{ModelFilter} Modul
+   welches die Filterprozesse übernimmte welche vorher von der \texttt{Person::Filter::List} und \texttt{MailingLists::Subscribers} Klasse
+   durchgeführt wurden. 
+
+   \begin{figure}[h]
+      \centering
+      \includegraphics[width=1.5\textwidth,]{hitobito_reworked_class_structure.drawio.png}
+      \caption{Ausgearbeitete Klassenstruktur}
+   \end{figure}
+
+   Um diese Klassen und Funktionen zu ersetzen, sind drei Methoden im neuen Modul angedacht. Zum einen die \texttt{filter} Methode welche 
+   auf die \texttt{Person\:\:Filter\:\:Chain} oder \texttt{MailingList\:\:Filter\:\:Chain} zugreifen wird, um den gegebenen Scope zu filtern.
+   Damit nicht unberechtig auf Datensätze zugegriffen wird, gibt es zusätzlich die Methode \texttt{accessibles} welche die Daten vor der Fitlerung auf
+   die Berechtigungen des Benutzers prüft. Zuletzt gibt es die Methode \texttt{get\_filter\_parameters} diese Methode ist dazu angedacht, um auf das \texttt{PeopleFilter}
+   Model zuzugreifen und die Filterkriterien aus diesem herauszuholen, wenn ein solcher Filter existiert. Wenn dies nicht der Fall ist, läuft der Filterprozess wie bisher und
+   die Filterparameter werden aus den Params des Requestst gefetcht. 
+
+
+\end{landscape}
 
 \section{Sicherheitskonzept}
 \section{Fehlerbehandlungskonzept}
