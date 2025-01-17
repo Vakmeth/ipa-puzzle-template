@@ -531,6 +531,52 @@ bei den Personenlisten, da \texttt{MailingLists::Filter::Chain} von {Person::Fil
 welches schlussendlich doppelte Abonnemente entfernt und zurückgibt. Anhand der gefetchten Daten kann der CSV Export vom \texttt{AsyncDownload} Modul abgeschlossen werden.
 
 \subsection{Lösungsvarianten}
+In diesem Abschnitt werden Lösungsvariantent für diese Arbeit definiert. Es sind Grobkonzepte welche genug Informationen darstellen, um eine
+Evaluation jeder Variante durchzuführen.
+
+\textbf{Lösungsvariante 1}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{filter_concept_1.drawio.png}
+   \caption{Neues Filterkonzept 1}
+\end{figure}
+
+Die Idee dieser Variante ist, dass die Filterung selbst nur noch über eine Klasse und ein Modell gelöst wird. Die Klasse Filter soll dabei
+die nötigen Parameter entgegennehmen und die neue Entität Filter\:\:Chain aufrufen. Hier handelt es sich um das Parent Modell der MaillingList\:\:Filter\:\:Chain
+und der Person\:\:Filter\:\:Chain. Diese Beziehung könnte auf Datenbanklevel mit einer Single Table Inheritance Strategie realisiert werden.
+Ziele dieser Lösungsvariante ist den Prozess der Filterung auf eine Klasse zu reduzieren. 
+
+\newpage
+
+\textbf{Lösungsvariante 2}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{filter_concept_2.drawio.png}
+   \caption{Neues Filterkonzept 2}
+\end{figure}
+
+Die Lösungvariante 2 ist ähnlich aufgebaut wie die erste. Allerdings wird in dieser Varainte auf die Single Table Inheritance Strategie verzichtet.
+Stattdessen soll mit eine Attribute "type" entschieden werden von welchem Typ die Anfrage für eine Filterung kommt. Die Filterklasse entscheidet dann
+auf welchen Table sie die SQL-Abfrage richten muss und fetcht die Daten.  
+
+\newpage
+
+\textbf{Lösungsvariante 3}
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=1\textwidth,]{filter_concept_3.drawio.png}
+   \caption{Neues Filterkonzept 3}
+\end{figure}
+
+Diese Variante lässt den Applicationlayer bestehen wie bisher, es werden keinen neuen Klassen implementiert.
+Allerdings greifen die MailingList und die PersonList nun direkt auf ein neues Model zu, der Filter\:\:Chain. Diese 
+beinhaltet die einen Zusammenzug der Filterdaten die gespeichert wurden. Dazu muss das \texttt{filter\_chain} Attribut und die People\:\:Filter Entitäten 
+in diesen Table migriert werden. Die Information über den Typ nach welchem gefiltert wird, ist nicht mehr nötig da die Filterkriterien direkt mit der Filter ID
+vom Table geholt werden können.
+
 \subsection{Variantenentscheid}
 \subsection{Ausarbeitung}
 
