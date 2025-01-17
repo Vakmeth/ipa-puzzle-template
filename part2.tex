@@ -577,7 +577,146 @@ beinhaltet die einen Zusammenzug der Filterdaten die gespeichert wurden. Dazu mu
 in diesen Table migriert werden. Die Information über den Typ nach welchem gefiltert wird, ist nicht mehr nötig da die Filterkriterien direkt mit der Filter ID
 vom Table geholt werden können.
 
+\newpage
+
 \subsection{Variantenentscheid}
+
+Um eine geeignete Entscheidung für eine der beschriebenen Lösungsvariantetn zu treffen, wird eine Bewertungsmatrix verwendet welche
+jede Lösungsvarainte anhand definierter Kriterien beurteilt. Die Kriterien können mit Punkten von 1 bis 10 bewertet werden, wobei 1 Punkt für das Nicht-Erfüllen
+eines Kriteriums und 10 für das Erfüllen des Kriteriums steht. 
+
+Folgende Kriterien wurden definiert:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.3\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue}{\color{white} \textbf{Kriterium}} & \color{white}\textbf{Beschreibung} & \color{white}\textbf{1 Punkt} & \color{white}\textbf{10 Punkte} \\[2pt]
+      \hline
+      Zeitaufwand & Wie viel Zeit wird für die Implementation benötigt? 
+      & Grosser Zeitaufwand, IPA ist mit diesem Konzept nicht umsetzbar & Kleiner Zeitaufwand, IPA ist problemlos umsetzbar. \\
+      \hline
+      Einführung & Ist das Konzept einfach in die produktive Umgebung einzuführen? Müssen Migrationen vorgenommen werden?
+       & Einführung in produktive Umgebung ist unmöglich & Einführung in produktive Umgebung ist problemlos möglich.\\
+      \hline
+      Wissen & Kann der Kandidate mit der Umsetzung des Konzeptes etwas lernen?
+      & Kandidat lernt nichts neues dazu & Es kann neues Wissen erarbeitet werden\\
+      \hline
+      Performance & Ist das Konzept performant? Spart das Konzept Zeit / Requests? 
+      & Konzept ist nicht performant, Filterungen werden durch Implementation deutlich langsamer 
+      & Hohe Performance, es kann viel Zeit durch die Implementation des Konzepts gespart werden.\\
+      \hline
+   \end{tabular}
+   \caption{Variantenentscheid Kriterien}
+\end{table}
+
+\newpage{}
+
+\textbf{Bewertungen}
+
+Im folgenden Abschnitt werden den definierten Kriterien Gewichtungen hinzugefüht, da nicht jedes Kriterium gleich wichtig für
+diese IPA ist.
+
+\textbf{Gewichtungen in \%}
+
+\begin{itemize}
+   \item \textbf{Zeitaufwand 40\%:} Um eine funktionelle Lösung am Ende der IPA aufweisen zu können, wird dem Zeitaufwand eine hohe Gewichtung zugerodnet
+   \item \textbf{Einführung 15\%:} Es ist wichtig eine Lösung zu implementieren welche schnell ihren Weg in die produktive Umgebung findet, da die Einführung von der IPA ausgenommen ist, wird diesem Kriterium eine geringere Gewichtung zugeordnet.
+   \item \textbf{Wissen 30\%:} Damit von der IPA profitiert werden kann, sollte von der Kandidat stets eine Wissenserweiterung durch deren Umsetzung erlangen. 
+   \item \textbf{Performance 15\%: } Ist eine Applikation zu langsam und benötigt mehrere Minute bis sie Resultate geladen hat, kann das den Benutzer schnell vor den Kopf stossen und dafür führen das dieser die Applikation in Zukunft nicht mehr verwendet.
+\end{itemize}
+
+\textbf{Lösungsvariante 1}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue}{\color{white} \textbf{Kriterium}} & \color{white}\textbf{Bewertung} & \color{white}\textbf{Beschreibung}\\[2pt]
+      \hline
+      Zeitaufwand & 2 & Grösster Zeitaufwand, Konzeption mit den meisten Neuimplementationen. \\
+      \hline
+      Einführung & 4 & Einführung möglich, es sollten keine grossen Schwierigkeiten auftreten \\
+      \hline 
+      Wissen & 10 & Durch viele Neuimplementationen kann hier am meisten profitiert werden. \\
+      \hline
+      Performance & 5 & Performance kann mit Sicherheit beibehalten werden. \\
+      \hline
+   \end{tabular}
+   \caption{Bewertung Lösungsvariante 1}
+\end{table}
+
+\newpage
+
+\textbf{Lösungsvariante 2}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue}{\color{white} \textbf{Kriterium}} & \color{white}\textbf{Bewertung} & \color{white}\textbf{Beschreibung}\\[2pt]
+      \hline
+      Zeitaufwand & 4 & Mittlerer Zeitaufwand, eine Neuimplementation \\
+      \hline
+      Einführung & 5 & Einführung problemlos möglich, es werden keine Migrationen benötigt \\
+      \hline 
+      Wissen & 8 & Durch die Neuimplementation einer Filterklasse kann profitiert werden, Punktabzug aufgrund der nicht vorhandenen Umsetzung der Single Table Inheritance \\
+      \hline
+      Performance & 5 & Performance kann mit Sicherheit beibehalten werden. \\
+      \hline
+   \end{tabular}
+   \caption{Bewertung Lösungsvariante 2}
+\end{table}
+
+\textbf{Lösungsvariante 3}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.6\textwidth}|}
+      \hline
+      \rowcolor{puzzleblue}{\color{white} \textbf{Kriterium}} & \color{white}\textbf{Bewertung} & \color{white}\textbf{Beschreibung}\\[2pt]
+      \hline
+      Zeitaufwand & 4 & Mittlerer Zeitaufwand, keine Neuimplementationen jedoch müssen Migrationen gemacht werden. \\
+      \hline
+      Einführung & 8 & Durch die Migration beider Tables ist das Potential für Schwierigkeiten bei der Einführung hier am Grössten. \\
+      \hline 
+      Wissen & 3 & Neues Wissen wird kaum erlangt, als Bonus gilt lediglich das Schreiben einer Migration. \\
+      \hline
+      Performance & 7 & Performance könnte durch erhöhte Aufrufe auf einen Table gefährdet sein. \\
+      \hline
+   \end{tabular}
+   \caption{Bewertung Lösungsvariante 3}
+\end{table}
+
+\newpage
+
+\begin{landscape}
+   \begin{table}[h!]
+      \begin{tabular}{|m{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|L{0.17\textwidth}|}
+         \hline
+         \rowcolor{puzzleblue} \multicolumn{2}{|l|}{} & \multicolumn{2}{|l|}{\color{white} \textbf{Variante 1}} & \multicolumn{2}{|l|}{\color{white} \textbf{Variante 2}} & \multicolumn{2}{|l|}{\color{white}\textbf{Variante 3}} \\[2pt]
+         \hline
+         \multirow{2}{*}{Kriterium} & \multirow{2}{*}{Gewichtung} & \multirow{2}{*}{Ungewichtet} & \multirow{2}{*}{Gewichtet} & \multirow{2}{*}{Gewichtet} & \multirow{2}{*}{Gewichtet} & \multirow{2}{*}{Ungewichtet} & \multirow{2}{*}{Gewichtet} \\ [10pt]
+         \hline
+         \multirow{2}{*}{Zeitaufwand} & \multirow{2}{*}{40\%} & \multirow{2}{*}{2} & \multirow{2}{*}{0.8} & \multirow{2}{*}{4} & \multirow{2}{*}{1.6} & \multirow{2}{*}{4} & \multirow{2}{*}{1.6} \\[10pt]
+         \hline
+         \multirow{2}{*}{Einführung} & \multirow{2}{*}{15\%} & \multirow{2}{*}{4} & \multirow{2}{*}{0.6} & \multirow{2}{*}{5} & \multirow{2}{*}{0.75} & \multirow{2}{*}{8} & \multirow{2}{*}{1.2} \\[10pt]
+         \hline 
+         \multirow{2}{*}{Wissen} &  \multirow{2}{*}{30\%} & \multirow{2}{*}{10} & \multirow{2}{*}{3} & \multirow{2}{*}{8} & \multirow{2}{*}{2.4} & \multirow{2}{*}{3} & \multirow{2}{*}{0.9} \\[10pt]
+         \hline
+         \multirow{2}{*}{Performance} & \multirow{2}{*}{15\%} & \multirow{2}{*}{5} & \multirow{2}{*}{0.75} & \multirow{2}{*}{5} & \multirow{2}{*}{0.75} & \multirow{2}{*}{7} & \multirow{2}{*}{1.05} \\[10pt]
+         \hline
+         \multirow{2}{*}{Total} & \multirow{2}{*}{100\%} &  \multirow{2}{*}{21} & \multirow{2}{*}{5.15} & \multirow{2}{*}{19} & \multirow{2}{*}{5.5} & \multirow{2}{*}{22} & \multirow{2}{*}{4.75} \\[10pt]
+         \hline
+      \end{tabular}
+      \caption{Nutzwertanalyse}
+   \end{table}
+
+\textbf{Fazit}
+
+Aus der Nutzwertanalyse kann geschlossen werden, dass sich die Variante 2 am Besten für die IPA eignet. Sie ist in der nötigen Zeit umsetzbar,
+bietet die Möglichkeit zum Wissensausbau, kann schnell eingeführt werden und wird vorausichtlich an der Performance nichts verändern.
+
+\end{landscape}
+
+\newpage
+
 \subsection{Ausarbeitung}
 
 \section{Sicherheitskonzept}
