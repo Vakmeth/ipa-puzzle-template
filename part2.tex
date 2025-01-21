@@ -813,8 +813,38 @@ Ruby benötigt kein Exception Handling wie es in anderen Sprachen der Fall ist. 
 abgehandelt, reicht das nicht werden die Exceptions wie die Laufzeitfehler behandelt und erscheinen im Sentry.
 
 \section{Testkonzept}
-
 \chapter{Ausführung}
+\section{Klassenstruktur}
+Während der Umsetzung habe ich mich an der Klassenstruktur im Entwurf orientiert. Obwohl die Grundlage der Implementation diesem Konzept
+gefolgt ist, gabe es dennoch gewisse Abweichungen. Entsprechend wurde ein neues Klassendiagramm erstellt:
+
+\begin{landscape}
+   \begin{figure}[h]
+      \centering
+      \includegraphics[width=1.5\textwidth,]{hitobito_implemented_class_structure.drawio.png}
+      \caption{Rollen in Scrum}
+   \end{figure}
+
+   \subsection{PeopleController}
+   Der PeopleController musste mehr erweitert werden als gedacht. Dies lag an der Entscheidung
+   jegliche \texttt{People}\-Logik aus dem Filter zu entfernen und in den Controller zu verlagern. Die wichtigste Methode ist \texttt{filtered\_entries}.
+   Von dieser Methode aus wird der Aufruf zum \texttt{ModelFilter} gemacht, welcher dann die Filterung übernimmt. Aus dem Filter selbst wurde die Methode
+   \texttt{default\_order} übernommen, welche dafür sorgt, dass die Ergebnisse in der richtig sortiert werden. Vorher befand sich die Methode im Filter, sie wurde entfernt da die Sortierung nichts mit der Filterung zu
+   tun hat und sich mit der neuen Struktur eine klare Abgrenzung zwischen Filterungssystem und Formatierung der Daten vor dem Zurückstellen ergibt.  
+\end{landscape}
+
+\subsection{ModelFilter}
+Der \texttt{ModelFilter} kam in der Grössenordnung in der er im Entwurf geplant wurde daher. Anders als geplant wurde er als Klasse nicht als Modul implementiert. Der Grund dafür ist,
+das in einer View eine Instanz des Filter benötigt ist, um auf nur ihm bekannte Attribute zuzugreifen. Als Zusatz kam das \texttt{chain}-Argument. Während des Entwickelns kam die Idee auf, dass anstatt einer get-Methode für die Filterchain,
+diese direkt vom Controller und der Subscriber-Klasse übergeben werden könnte. So wird das geplante \texttt{type}-Attribut beim Filteraufruf gespart und der Filter wird noch generischer. Dies führt dazu das 
+die nicht funktionale Anforderung 1 (Erweiterbarkeit) besser abgedeckt werden kann, denn nun könnten theoretisch jegliche weitere Models mit ihrer eigenen Filterchain an den \texttt{ModelFilter} gegeben werden, welcher nur noch die Filterung selbst durchführt.
+
+\subsection{MaillingLists\:\:Subscribers}
+Diese Klasse kam dem Entwurf am nächsten. Es konnte wie geplant die Methoden \texttt{scope} und \texttt{people\_as\_configured} so erweitert werden, dass nur noch der Aufruf zum \texttt{ModelFilter} stattfindet. Die restliche Logik bleibt unverändert. 
+
+\subsection{Person\:\:Filter\:\:List}
+Im UML wurde diese Klasse mit rot markiert, da sie nun nicht mehr im Filterprozess der Personenlisten und Abonnementen integriert ist. Um die Funktionalität der Komponenten, welche in dieser IPA nicht berücksichtig trotzdem zu 
+gewährleisten und somit die Möglichkeit für manuelles Testing sicherzustellen, wurde die Klasse nicht aus dem Repository entfernt. 
 
 \input{testprotokoll.tex}
 
