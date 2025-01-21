@@ -739,6 +739,9 @@ bietet die Möglichkeit zum Wissensausbau, kann schnell eingeführt werden und w
 
 \end{landscape}
 
+\subsection{Gems}
+TODO: Describe
+
 \section{Sicherheitskonzept}
 Um die Sicherheit im Umbau der Filter sicherzustellen wird ein Sicherheitskonzept
 benötigt. Das Ziel dieses Konzeptes ist es mögliche Angriffe aufzuführen
@@ -822,7 +825,7 @@ gefolgt ist, gabe es dennoch gewisse Abweichungen. Entsprechend wurde ein neues 
    \begin{figure}[h]
       \centering
       \includegraphics[width=1.5\textwidth,]{hitobito_implemented_class_structure.drawio.png}
-      \caption{Rollen in Scrum}
+      \caption{Klassendiagramm nach Umsetzung}
    \end{figure}
 
    \subsection{PeopleController}
@@ -839,12 +842,77 @@ das in einer View eine Instanz des Filter benötigt ist, um auf nur ihm bekannte
 diese direkt vom Controller und der Subscriber-Klasse übergeben werden könnte. So wird das geplante \texttt{type}-Attribut beim Filteraufruf gespart und der Filter wird noch generischer. Dies führt dazu das 
 die nicht funktionale Anforderung 1 (Erweiterbarkeit) besser abgedeckt werden kann, denn nun könnten theoretisch jegliche weitere Models mit ihrer eigenen Filterchain an den \texttt{ModelFilter} gegeben werden, welcher nur noch die Filterung selbst durchführt.
 
-\subsection{MaillingLists\:\:Subscribers}
+\subsection{MaillingLists::Subscribers}
 Diese Klasse kam dem Entwurf am nächsten. Es konnte wie geplant die Methoden \texttt{scope} und \texttt{people\_as\_configured} so erweitert werden, dass nur noch der Aufruf zum \texttt{ModelFilter} stattfindet. Die restliche Logik bleibt unverändert. 
 
-\subsection{Person\:\:Filter\:\:List}
+\subsection{Person::Filter::List}
 Im UML wurde diese Klasse mit rot markiert, da sie nun nicht mehr im Filterprozess der Personenlisten und Abonnementen integriert ist. Um die Funktionalität der Komponenten, welche in dieser IPA nicht berücksichtig trotzdem zu 
 gewährleisten und somit die Möglichkeit für manuelles Testing sicherzustellen, wurde die Klasse nicht aus dem Repository entfernt. 
+
+\section{Gems}
+In der Analyse der Arbeit wurde aufgeführt welche Gems voraussichtlich in der Arbeit verwendet werden. Dieser Abschnitt klärt, wie die Arbeit mit den genannten Gems funktionierte.
+
+\subsection{can-can-can}
+In der Analyse wurde erwartet das mit dem can-can-can Gem gearbeitet werden muss, um nur die Daten in die Filterung aufzunehmen, auf welche der Benutzer Zugriff hat.
+Wie während der Implementierung festgestellt wurde, konnte direkt auf ein Array mit den bereits verifizierten Daten zugegriffen werden. Sodurch war eine direkte Interaktion mit dem Gem
+nicht mehr nötig.
+
+\subsection{dry-crud}
+Das dry-crud Gem wurde ebenfalls nicht direkt verwendet. Die Anpassungen am Controller konnten vollzogen werden, ohne Methoden zu verändern welche durch von diesem Gem betroffen sind.
+
+\section{Unvorhergesehene Änderungen}
+In der Umsetzung dieser Arbeit traten Änderungen an Teilen der Applikation auf, welche im Entwurf nicht berücksichtig wurden.
+
+\subsection{application.rb}
+Standardmässig inkludiert Rails nur bestimmte Ordner und Dateien in seinem \texttt{load\_path}. Während der Implementation wurde ein neuer Ordner \texttt{filter}
+angelegt um die neue Klasse darin zu verwalten. Da diese Klasse nicht im \texttt{load\_path} war musste sie im \texttt{application.rb} hinzugefügt werden:
+
+\begin{verbatim}
+   # Custom directories with classes and modules you want to be autoloadable.
+   config.autoload_paths += %W( #{config.root}/app/abilities
+                                #{config.root}/app/domain
+                                #{config.root}/app/domain/filter
+                                #{config.root}/app/jobs
+                                #{config.root}/app/serializers
+                                #{config.root}/app/utils
+                            )
+\end{verbatim}
+
+\subsection{\_list.html.haml}
+Die View welche die Personenliste darstellt, beinhaltete eine Referenz adressiert an die Instanz der \texttt{Person::Filter::List}. Damit die View dennoch für das manuelle Testing verwendete werden kann 
+wurde ein Teil der Zeit für die Sicherstellung der Anzeige verwendet. Der Teil der am meisten Aufwand verursachte war die Anpassung des \texttt{FilterNavigation::People} in der View.
+
+\begin{verbatim}
+   - content_for(:filter, FilterNavigation::People
+   .new(self, @group, @model_filter, @name).to_s)
+\end{verbatim}
+
+Dieser Komponent verwaltet die Auswahl des Filers über das UI. Durch das Entfernen der \texttt{Person::Filter::List} aus dem Filterprozess, musste die Refernz der View auf den neuen \texttt{ModelFilter}
+geändert werden. Zusätzlich holte dieser Komponent den definierten Name des Personenfilters:
+
+\newpage
+
+\begin{figure}
+   \centering
+   \includegraphics[width=1\textwidth,]{hitobito_named_filtert.drawio.png}
+   \caption{Klassendiagramm nach Umsetzung}
+\end{figure}
+
+Über diese Referenz. Das das Ziel eine Abgrenzung genau diser Verbindung der Funktionen war, wurde eine Instanzvariable im \texttt{PeopleController} angelegt welche den Namen des Personenlistenfilters speichert
+falls dieser existiert:
+
+\begin{verbatim}
+   def person_filter_args
+    if params[:filter_id]
+      filter = PeopleFilter.for_group(group).find(params[:filter_id])
+      @name = filter.name
+      filter.to_params[:filters]
+    else
+      params
+    end
+  end
+\end{verbatim}
+
 
 \input{testprotokoll.tex}
 
