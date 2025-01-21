@@ -740,6 +740,55 @@ bietet die Möglichkeit zum Wissensausbau, kann schnell eingeführt werden und w
 \end{landscape}
 
 \section{Sicherheitskonzept}
+Um die Sicherheit im Umbau der Filter sicherzustellen wird ein Sicherheitskonzept
+benötigt. Das Ziel dieses Konzeptes ist es mögliche Angriffe aufzuführen
+und die Blockade dieser Angriffe zu dokumentieren. 
+
+\subsection{SQL-Injection}
+Die Einzigen Userinputs welche in dieser IPA auftreten sind die Textinputs welche im Filter
+ausgewählt werden können. Da die Eingabe des Users nicht direkt in die Postgres Datenbank gespeichert wird,
+ist diese Eingabe nicht für eine SQL-Injection gefährdet. Selbst wenn die SQL-Abfrage direkt gemacht würde,
+verhindert das ORM ActiveRecord mit seinen Standardmethoden, dass schädliche Eingaben abgespeichert werden.
+Dies geschieht unter anderem durch escapen der Strings.
+
+\subsection{Cross-Site Scripting}
+Da in diesem Feature Userinputs an das Rails-Backend gesendet werden muss die Cross-Site Scripting Attacke ebenfalls
+berücksichtig werden. Rails selbst bietet dafür einen eingebauten Abwehrmechanismus. Wenn der User eine XSS-Attacke ausführen möcht,
+indem er in einem der Filterinputs folgende Javascript Eingaben macht:
+
+\begin{verbatim}
+   <h2>Welcome <script>alert("This is a XSS attack!")</script></h2>
+\end{verbatim}
+
+Standardmässig escaped Rails diese Eingaben und ändert die special characters. So wird aus der Eingabe oben:
+
+\begin{verbatim}
+   <h2>Welcome &lt;script&gt;alert\
+   (&quot;This is a XSS attack!&quot;)&lt;/script&gt;</h2>
+\end{verbatim}
+
+\newpage
+
+\subsection{URL Interpretation}
+Bei der URL-Interpretation fabriziert der Angreifer eine URL um damit auf die persönlichen
+Daten eines Benutzers zuzugreifen. Dabei kann der Angreifer versuchen die URL zu erraten. 
+Dieser Angriff wird in Hitobito mit dem Gem \texttt{can-can-can} verhindert. Mit diesem Gem wird sichergestellt,
+das der Absender der Anfrage die nötigen Berechtigungen für das Einsehen der Informationen hat. Die Prüfung der Berechtigungen sieht wie folgt
+aus: 
+
+\begin{verbatim}
+   class Ability include CanCan::Ability
+
+   def define_root_abilities
+    can :manage, :all
+    # root cannot change her email, because this is what makes her root.
+    cannot :update_email, Person do |p|
+      p.root?
+    end
+  end
+\end{verbatim}
+
+
 \section{Fehlerbehandlungskonzept}
 \section{Migrationskonzept}
 \section{Testkonzept}
