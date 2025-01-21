@@ -788,9 +788,30 @@ aus:
   end
 \end{verbatim}
 
+\subsection{Kommunikation HTTP/S}
+Die Umgebungen auf der Integration und Produktion kommunizieren via HTTPS. Somit ist
+die verschlüsselte Kommunikation beim Transfer von produktiven Daten gesichert.
 
 \section{Fehlerbehandlungskonzept}
-\section{Migrationskonzept}
+Bei der Entwicklung und während der Laufzeit können stets Fehler oder nicht vorgesehene Probleme entstehen.
+Im folgenden Abschnitt wird dokumentiert, wie mit diesen Fällen umgegangen wird.
+
+\subsection{Nutzereingabe}
+Bei der Nutzereingabe des Users werden keine möglichen Exceptions erwartet. Der Benutzer kann im Filter, in der Suche nach einem
+bestimmten Text alles eingeben, ohne Einschränkungen. Mögliche Angriffe über Injections werden nach dem definierten
+Sicherheitskonzept abgehandelt.
+
+\subsection{Laufzeitfehler}
+Tritt in der Applikation ein Laufzeit Fehler auf wird dies sowohl in den Logs wie in der Sentry
+Umgebung von Hitobito aufgezeigt. Im Sentry werden zusätzlich die aufgetretenen Execptions gesammelt, um 
+den Entwicklern eine Übersicht über allfällige Bugs zu geben. Gesammelte Exceptions können einem Entwickler
+zugewiesen oder wenn sie gefixed wurden, vom Sentry entfernt werden. Für diese IPA ist keine Modifizierung an der 
+Sentry Umgebung nötig.
+
+\subsection{Exception Handling}
+Ruby benötigt kein Exception Handling wie es in anderen Sprachen der Fall ist. Exceptions werden durch Conditionals
+abgehandelt, reicht das nicht werden die Exceptions wie die Laufzeitfehler behandelt und erscheinen im Sentry.
+
 \section{Testkonzept}
 
 \chapter{Ausführung}

@@ -79,27 +79,30 @@
 \contentsline {subsection}{\numberline {12.3.1}SQL-Injection}{67}{subsection.12.3.1}%
 \contentsline {subsection}{\numberline {12.3.2}Cross-Site Scripting}{67}{subsection.12.3.2}%
 \contentsline {subsection}{\numberline {12.3.3}URL Interpretation}{68}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.3.4}Kommunikation HTTP/S}{68}{subsection.12.3.4}%
 \contentsline {section}{\numberline {12.4}Fehlerbehandlungskonzept}{68}{section.12.4}%
-\contentsline {section}{\numberline {12.5}Migrationskonzept}{68}{section.12.5}%
-\contentsline {section}{\numberline {12.6}Testkonzept}{68}{section.12.6}%
-\contentsline {chapter}{\numberline {13}Ausführung}{69}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Testprotokoll}{69}{section.13.1}%
-\contentsline {chapter}{\numberline {14}Einführung}{70}{chapter.14}%
-\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{71}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{71}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{71}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{71}{section.15.3}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{72}{part.3}%
-\contentsline {chapter}{\numberline {16}Verzeichnise}{73}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{73}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{74}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Code Verzeichnis}{74}{section.16.3}%
-\contentsline {subsection}{Quellenverzeichnis}{75}{chapter*.130}%
-\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{76}{chapter.17}%
-\contentsline {chapter}{\numberline {18}Glossar}{77}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Anhänge}{78}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{78}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Git commit convention}{78}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Security conventions}{78}{section.19.3}%
-\contentsline {section}{\numberline {19.4}Datenschutzkonzept}{79}{section.19.4}%
+\contentsline {subsection}{\numberline {12.4.1}Nutzereingabe}{68}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}Laufzeitfehler}{69}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}Exception Handling}{69}{subsection.12.4.3}%
+\contentsline {section}{\numberline {12.5}Testkonzept}{69}{section.12.5}%
+\contentsline {chapter}{\numberline {13}Ausführung}{70}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Testprotokoll}{70}{section.13.1}%
+\contentsline {chapter}{\numberline {14}Einführung}{71}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{72}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{72}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{72}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{72}{section.15.3}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{73}{part.3}%
+\contentsline {chapter}{\numberline {16}Verzeichnise}{74}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{74}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{75}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Code Verzeichnis}{75}{section.16.3}%
+\contentsline {subsection}{Quellenverzeichnis}{76}{chapter*.130}%
+\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{77}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Glossar}{78}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Anhänge}{79}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{79}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Git commit convention}{79}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Security conventions}{79}{section.19.3}%
+\contentsline {section}{\numberline {19.4}Datenschutzkonzept}{80}{section.19.4}%
 \contentsfinish 
