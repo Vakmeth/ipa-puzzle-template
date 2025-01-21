@@ -86,35 +86,38 @@
 \contentsline {subsection}{\numberline {12.4.2}Laufzeitfehler}{70}{subsection.12.4.2}%
 \contentsline {subsection}{\numberline {12.4.3}Exception Handling}{70}{subsection.12.4.3}%
 \contentsline {section}{\numberline {12.5}Testkonzept}{70}{section.12.5}%
-\contentsline {chapter}{\numberline {13}Ausführung}{71}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Klassenstruktur}{71}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}PeopleController}{72}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}ModelFilter}{73}{subsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.1.3}MaillingLists::Subscribers}{73}{subsection.13.1.3}%
-\contentsline {subsection}{\numberline {13.1.4}Person::Filter::List}{73}{subsection.13.1.4}%
-\contentsline {section}{\numberline {13.2}Gems}{73}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}can-can-can}{74}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {13.2.2}dry-crud}{74}{subsection.13.2.2}%
-\contentsline {section}{\numberline {13.3}Unvorhergesehene Änderungen}{74}{section.13.3}%
-\contentsline {subsection}{\numberline {13.3.1}application.rb}{74}{subsection.13.3.1}%
-\contentsline {subsection}{\numberline {13.3.2}\_list.html.haml}{75}{subsection.13.3.2}%
-\contentsline {section}{\numberline {13.4}Testprotokoll}{76}{section.13.4}%
-\contentsline {chapter}{\numberline {14}Einführung}{77}{chapter.14}%
-\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{78}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{78}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{78}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{78}{section.15.3}%
-\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{79}{part.3}%
-\contentsline {chapter}{\numberline {16}Verzeichnise}{80}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{80}{section.16.1}%
-\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{81}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Code Verzeichnis}{82}{section.16.3}%
-\contentsline {subsection}{Quellenverzeichnis}{83}{chapter*.132}%
-\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{84}{chapter.17}%
-\contentsline {chapter}{\numberline {18}Glossar}{85}{chapter.18}%
-\contentsline {chapter}{\numberline {19}Anhänge}{86}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{86}{section.19.1}%
-\contentsline {section}{\numberline {19.2}Git commit convention}{86}{section.19.2}%
-\contentsline {section}{\numberline {19.3}Security conventions}{86}{section.19.3}%
-\contentsline {section}{\numberline {19.4}Datenschutzkonzept}{87}{section.19.4}%
+\contentsline {subsection}{\numberline {12.5.1}Testinfrastruktur}{70}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Fehlerklassen}{71}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {12.5.3}Manuelle Tests}{71}{subsection.12.5.3}%
+\contentsline {chapter}{\numberline {13}Ausführung}{72}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Klassenstruktur}{72}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}PeopleController}{73}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}ModelFilter}{74}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}MaillingLists::Subscribers}{74}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {13.1.4}Person::Filter::List}{74}{subsection.13.1.4}%
+\contentsline {section}{\numberline {13.2}Gems}{74}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}can-can-can}{75}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}dry-crud}{75}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Unvorhergesehene Änderungen}{75}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}application.rb}{75}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}\_list.html.haml}{76}{subsection.13.3.2}%
+\contentsline {section}{\numberline {13.4}Testprotokoll}{77}{section.13.4}%
+\contentsline {chapter}{\numberline {14}Einführung}{78}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Sprintabschlüsse}{79}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Abschluss Sprint Initialisierung}{79}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Abschluss Sprint Umsetzung}{79}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Abschluss Sprint Finalisierung}{79}{section.15.3}%
+\contentsline {part}{III\hspace {1em}Anhang und Verzeichnise}{80}{part.3}%
+\contentsline {chapter}{\numberline {16}Verzeichnise}{81}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Tabellenverzeichnis}{81}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Abbildungsverzeichnis}{82}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Code Verzeichnis}{83}{section.16.3}%
+\contentsline {subsection}{Quellenverzeichnis}{84}{chapter*.133}%
+\contentsline {chapter}{\numberline {17}Verwendete Abkürzungen}{85}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Glossar}{86}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Anhänge}{87}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Sitzungsprotokolle}{87}{section.19.1}%
+\contentsline {section}{\numberline {19.2}Git commit convention}{87}{section.19.2}%
+\contentsline {section}{\numberline {19.3}Security conventions}{87}{section.19.3}%
+\contentsline {section}{\numberline {19.4}Datenschutzkonzept}{88}{section.19.4}%
 \contentsfinish 

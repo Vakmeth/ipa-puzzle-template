@@ -816,6 +816,40 @@ Ruby benötigt kein Exception Handling wie es in anderen Sprachen der Fall ist. 
 abgehandelt, reicht das nicht werden die Exceptions wie die Laufzeitfehler behandelt und erscheinen im Sentry.
 
 \section{Testkonzept}
+\subsection{Testinfrastruktur}
+In dieser IPA unterscheiden wir drei Arten von Tests:
+
+\begin{itemize}
+   \item \textbf{Controller Tests:} Tests die Action eines Controllers
+   \item \textbf{Domain Tests:} Testet die Funktion eines Domain-Models
+   \item \textbf{Manuelles Testen:} Testet das gesamte Feature
+\end{itemize}
+
+Hitobito verwendet für das Ausführen lokaler Tests RSpec 3.13.0. Für die manuellen Tests wird Firefox 80.0 (64-bit) verwendet. Als Gerät wird ein Laptop mit Pop!\_OS 22.04 LTS verwendet.
+Um während der Entwicklung die Funktionalität der Applikation sicherzustellen werden die bereits bestehenden Tests im Hitobito ausgeführt und somit die Controller sowie Domain Tests abgedeckt.
+Es werden in dieser Arbeit somit keine neuen Domain oder Controller Tests geschrieben.
+
+\newpage
+
+\subsection{Fehlerklassen}
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Fehlerklasse} & \color{white}\textbf{Beschreibung} \\[12pt]
+       \hline
+       FK0 & Fehlerfrei & Keine Fehler \\
+       \hline
+       FK1 & Nicht erfolgsgefährdend & Kleine Fehler, beeinträchtigen Funktion nur bedingt. \\
+       \hline
+       FK2 & Erfolgsgefährdend & Fehler welche die Funktion beeinträchtigen. \\
+       \hline
+     \end{tabular}
+     \caption{Fehlerklassen}
+\end{table}
+
+\subsection{Manuelle Tests}
+
 \chapter{Ausführung}
 \section{Klassenstruktur}
 Während der Umsetzung habe ich mich an der Klassenstruktur im Entwurf orientiert. Obwohl die Grundlage der Implementation diesem Konzept
