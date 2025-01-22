@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  22 JAN 2025 09:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.13)  22 JAN 2025 10:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,7 +906,32 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 50.
 \c@highlight=\count405
- (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
+ (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux
+
+LaTeX Warning: Label `Agile Scrum Group' multiply defined.
+
+
+LaTeX Warning: Label `Agile Scrum Group' multiply defined.
+
+
+LaTeX Warning: Label `StackExchange' multiply defined.
+
+
+LaTeX Warning: Label `StackExchange' multiply defined.
+
+
+LaTeX Warning: Label `StackOverflow' multiply defined.
+
+
+LaTeX Warning: Label `StackOverflow' multiply defined.
+
+
+LaTeX Warning: Label `StackOverflow' multiply defined.
+
+
+LaTeX Warning: Label `StackOverflow' multiply defined.
+
+))
 \openout1 = `ipa.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
@@ -2810,17 +2835,92 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 [88]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
-[][][]$\OT1/zi4/m/n/12 TODO : URLeinf \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 protect \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 unhbox \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 voidb @ x \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 bgroup \OMS/lmsy/m/n/12 n
+[][][]$\OT1/zi4/m/n/12 https : / / agilescrumgroup . de /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-\OT1/zi4/m/n/12 U @ D1ex\OMS/lmsy/m/n/12 fn\OT1/zi4/m/n/12 setbox \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 z @ \OMS/lmsy/m/n/12 n\OT1/zi4/m/n/12 hbox\OMS/lmsy/m/n/12 fn\OT1/zi4/m/n/12 char127 [] \OMS/lmsy/m/n/12 n\OT1/zi4/m/n/12 dimen @ -[] . 45ex \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 advance \OMS/lmsy/m/n/12 n \OT1/zi4/m/n/12 dimen @
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[][][]$\OT1/zi4/m/n/12 https : / / agilescrumgroup . de /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[][][]$\OT1/zi4/m/n/12 https : / / scrumguide . de / entwickler/$[][]\OT1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+[][][]$\OT1/zi4/m/n/12 https : / / tex . stackexchange . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+\OT1/zi4/m/n/12 questions / 36030 / how-[]to-[]make-[]a-[]single-[]word-[]look-[]as-[]some-[]code$[][]\OT1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[][][]$\OT1/zi4/m/n/12 https : / / www . overleaf . com / learn / latex / Lists$[][]\OT1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+[][][]$\OT1/zi4/m/n/12 https : / / tex . stackexchange .
+ []
+
+
+Overfull \hbox (69.5419pt too wide) in paragraph at lines 25--26
+\OT1/zi4/m/n/12 com / questions / 337 / how-[]to-[]change-[]certain-[]pages-[]into-[]landscape-[]portrait-[]mode$[][]\OT1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com / questions / 63364815 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[][][]$\OT1/zi4/m/n/12 https : / / www . stackhawk . com / blog /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[][][]$\OT1/zi4/m/n/12 https : / / rubygems . org / gems / cancancan /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+[][][]$\OT1/zi4/m/n/12 https : / / tex . stackexchange . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[][][]$\OT1/zi4/m/n/12 https : / / www . honeybadger . io / blog /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[][][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com / questions / 15769739 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+[][][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+[][][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com / questions /
  []
 
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 24.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 34.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -2834,11 +2934,53 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 
 [89
 
-]
-Kapitel 17.
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Agile\040Scrum\040Group}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.34 ...erflow - Postgres Subquery]{StackOverflow}
+                                                   \url{https://stackoverflo...pdfTeX warning (ext4): destination with the same identifier (name{cite.Agile\040Scrum\040Group}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.34 ...erflow - Postgres Subquery]{StackOverflow}
+                                                   \url{https://stackoverflo...pdfTeX warning (ext4): destination with the same identifier (name{cite.StackExchange}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.34 ...erflow - Postgres Subquery]{StackOverflow}
+                                                   \url{https://stackoverflo...pdfTeX warning (ext4): destination with the same identifier (name{cite.StackExchange}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.34 ...erflow - Postgres Subquery]{StackOverflow}
+                                                   \url{https://stackoverflo...]pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.34 ...erflow - Postgres Subquery]{StackOverflow}
+                                                   \url{https://stackoverflo...
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+[][][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\OT1/zi4/m/n/12 questions / 12238621 / sql-[]subquery-[]has-[]too-[]many-[]columns$[][]\OT1/lmr/m/n/12 ,
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 ...[StackOverflow - Load path]{StackOverflow}
+                                                   \url{https://stackoverflo...
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+[][][]$\OT1/zi4/m/n/12 https : / / stackoverflow . com / questions /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+\OT1/zi4/m/n/12 1223481 / adding-[]a-[]directory-[]to-[]the-[]load-[]path-[]in-[]rails$[][]\OT1/lmr/m/n/12 ,
+ []
+
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 38.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 39.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -2850,13 +2992,19 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[90
-
-]
-Kapitel 18.
+[90pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \chapter
+             {Verwendete Abkürzungen}pdfTeX warning (ext4): destination with the same identifier (name{cite.StackOverflow}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.39 \chapter
+             {Verwendete Abkürzungen}]
+Kapitel 17.
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
 <use bilder//puzzle_tagline_blau.png>
-Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 52.
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 53.
 (pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
 
 Overfull \hbox (26.79134pt too wide) has occurred while \output is active
@@ -2871,47 +3019,65 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
 [91
 
 ]
+Kapitel 18.
+File: bilder//puzzle_tagline_blau.png Graphic file (type png)
+<use bilder//puzzle_tagline_blau.png>
+Package pdftex.def Info: bilder//puzzle_tagline_blau.png  used on input line 67.
+(pdftex.def)             Requested size: 82.51282pt x 21.55902pt.
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+[][]|  
+ []
+
+
+Overfull \hbox (26.79134pt too wide) has occurred while \output is active
+ [][]|
+ []
+
+[92
+
+]
 Kapitel 19.
-<bilder//git_commit_conventions.png, id=1334, 1030.85126pt x 500.87125pt>
+<bilder//git_commit_conventions.png, id=1372, 1030.85126pt x 500.87125pt>
 File: bilder//git_commit_conventions.png Graphic file (type png)
 <use bilder//git_commit_conventions.png>
-Package pdftex.def Info: bilder//git_commit_conventions.png  used on input line 60.
+Package pdftex.def Info: bilder//git_commit_conventions.png  used on input line 75.
 (pdftex.def)             Requested size: 400.0pt x 194.35309pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 60--61
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 75--76
  [][] 
  []
 
-<bilder//security_conventions_1.png, id=1335, 2570.60374pt x 996.72375pt>
+<bilder//security_conventions_1.png, id=1373, 2570.60374pt x 996.72375pt>
 File: bilder//security_conventions_1.png Graphic file (type png)
 <use bilder//security_conventions_1.png>
-Package pdftex.def Info: bilder//security_conventions_1.png  used on input line 68.
+Package pdftex.def Info: bilder//security_conventions_1.png  used on input line 83.
 (pdftex.def)             Requested size: 400.0pt x 155.08372pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 68--69
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-<bilder//security_conventions_2.png, id=1336, 2570.60374pt x 1287.81125pt>
+<bilder//security_conventions_2.png, id=1374, 2570.60374pt x 1287.81125pt>
 File: bilder//security_conventions_2.png Graphic file (type png)
 <use bilder//security_conventions_2.png>
-Package pdftex.def Info: bilder//security_conventions_2.png  used on input line 73.
+Package pdftex.def Info: bilder//security_conventions_2.png  used on input line 88.
 (pdftex.def)             Requested size: 400.0pt x 200.37505pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 88--89
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<bilder//security_conventions_3.png, id=1337, 2570.60374pt x 550.055pt>
+<bilder//security_conventions_3.png, id=1375, 2570.60374pt x 550.055pt>
 File: bilder//security_conventions_3.png Graphic file (type png)
 <use bilder//security_conventions_3.png>
-Package pdftex.def Info: bilder//security_conventions_3.png  used on input line 78.
+Package pdftex.def Info: bilder//security_conventions_3.png  used on input line 93.
 (pdftex.def)             Requested size: 400.0pt x 85.58498pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 78--79
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 93--94
  [][] 
  []
 
@@ -2933,7 +3099,7 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[92
+[93
 
  <./bilder//git_commit_conventions.png> <./bilder//security_conventions_1.png>]
 File: bilder//puzzle_tagline_blau.png Graphic file (type png)
@@ -2950,28 +3116,31 @@ Overfull \hbox (26.79134pt too wide) has occurred while \output is active
  [][]|
  []
 
-[93 <./bilder//security_conventions_2.png> <./bilder//security_conventions_3.png>] 
+[94 <./bilder//security_conventions_2.png> <./bilder//security_conventions_3.png>] 
 AED: lastpage setting LastPage
 (./ipa.aux (./titlePage.aux) (./part1.aux) (./part2.aux) (./part3.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `ipa.out' has not changed.
 (rerunfilecheck)             Checksum: ABC65BDE6A11649C2A19D68F0430282D;17307.
  ) 
 Here is how much of TeX's memory you used:
- 32077 strings out of 478287
- 610673 string characters out of 5849289
+ 32092 strings out of 478287
+ 610936 string characters out of 5849289
  1184173 words of memory out of 5000000
- 49228 multiletter control sequences out of 15000+600000
+ 49235 multiletter control sequences out of 15000+600000
  525055 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,16n,129p,737b,824s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
-Output written on ipa.pdf (94 pages, 1987076 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb>
+Output written on ipa.pdf (95 pages, 1986746 bytes).
 PDF statistics:
- 1474 PDF objects out of 1728 (max. 8388607)
- 1263 compressed objects within 13 object streams
- 343 named destinations out of 1000 (max. 500000)
+ 1508 PDF objects out of 1728 (max. 8388607)
+ 1298 compressed objects within 13 object streams
+ 351 named destinations out of 1000 (max. 500000)
  1160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
