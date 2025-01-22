@@ -834,7 +834,7 @@ Es werden in dieser Arbeit somit keine neuen Domain oder Controller Tests geschr
 \subsection{Fehlerklassen}
 
 \begin{table}[h!]
-   \begin{tabular}{|L{0.2\textwidth}|L{0.2\textwidth}|L{0.2\textwidth}|}
+   \begin{tabular}{|L{0.2\textwidth}|L{0.4\textwidth}|L{0.4\textwidth}|}
        \hline
        \rowcolor{puzzleblue} \color{white}\textbf{Bezeichnung} & \color{white}\textbf{Fehlerklasse} & \color{white}\textbf{Beschreibung} \\[12pt]
        \hline
@@ -849,6 +849,170 @@ Es werden in dieser Arbeit somit keine neuen Domain oder Controller Tests geschr
 \end{table}
 
 \subsection{Manuelle Tests}
+Die manuellen Tests werden lokal, mit den Testdaten von Hitobito durchgeführt. Die Testdaten können in der Hitobito-Konsole
+mit \texttt{hit rails wagon seed} eingespielt werden. Mit dem generic Wagon bieten sich drei mögliche User für das Login an:
+
+\begin{table}[h!]
+   \begin{tabular}{|L{0.4\textwidth}|L{0.2\textwidth}|L{0.4\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \color{white}\textbf{Username} & \color{white}\textbf{Passwort} & \color{white}\textbf{Berechtigungen}\\[12pt]
+       \hline
+        admin@hitobito.ch & demo & Administrator mit vollem Zugriff \\
+       \hline
+       leitung@hitobito.ch & demo &  Rolle Leitung einer lokalen Gruppe\\
+       \hline
+       mitglied@hitobito.ch & demo & Einfaches Gruppenmitglied \\
+       \hline
+     \end{tabular}
+     \caption{Accounts für manuelle Tests}
+\end{table}
+
+
+Bei den manuellen Tests muss man sich immer mit einer der oben beschriebenen Accounts einloggen.
+In den Testszenarien wird der Account mit "Als {Account} anmelden" beschrieben, {Account} steht hierbei als
+Platzhalter für den Account des jeweiligen Benutzer. Der Loginablauf ist:
+
+\begin{itemize}
+   \item Navigation auf \texttt{localhost:3000/users/sign\_in}
+   \item Account Credentials eingeben
+   \item Auf Button Anmelden klicken
+\end{itemize}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 1}} \\[12pt]
+       \hline
+        Testname & Personenliste, gesamte Ebene \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & Funktionale Anforderung 2 \\
+       \hline
+       Voraussetzungen & Keine \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Link "Personen" auf Personenliste navigieren
+         \item Im Filter "Gesamte Ebene" auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen werden angezeigt
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 1}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 2}} \\[12pt]
+       \hline
+        Testname & Personenliste, Carlo Filter \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & Funktionale Anforderung 2 \\
+       \hline
+       Voraussetzungen & Ein Filter mit dem Namen "Carlo" wurde erstellt, welche alle User mit dem 
+       Vornamen "Carlo" zurückgibt. \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Link "Personen" auf Personenliste navigieren
+         \item Im Filter "Carlo" auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Alle Personen mit Vornamen "Carlo" werden angezeigt
+         \item Filternamen wird korrekt dargestellt
+      \end{itemize} \\
+      \hline
+     \end{tabular}
+     \caption{Testfall 2}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 3}} \\[12pt]
+       \hline
+        Testname & Abonnemente, PDF-Export \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & Funktionale Anforderung 2 \\
+       \hline
+       Voraussetzungen & Unter den globalen Bedingungen wurden alle User aufgenommen, welche den Vornamen
+       "Carlo besitzen" \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Link "Abonnemente" auf Abonnementenliste navigieren
+         \item In der Abonnementenliste das Abo "Bloodaxe Fist" auswählen
+         \item Unter Dropdown "Export" PDF auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item PDF wird heruntergeladen
+         \item Auf dem PDF befinden sich nur Benutzer mit dem Vornamen "Carlo"
+      \end{itemize}\\
+      \hline
+     \end{tabular}
+     \caption{Testfall 3}
+\end{table}
+
+\newpage
+
+\begin{table}[h!]
+   \rowcolors{2}{puzzleblue!30}{white}
+   \begin{tabular}{|L{0.4\textwidth}|L{0.6\textwidth}|}
+       \hline
+       \rowcolor{puzzleblue} \multicolumn{2}{|l|}{\color{white}\textbf{Testfall Nr. 4}} \\[12pt]
+       \hline
+        Testname & Abonnemente, Excel-Export \\
+       \hline
+       Testmethode & Manuell \\
+       \hline
+        Anforderung & Funktionale Anforderung 2 \\
+       \hline
+       Voraussetzungen & Unter den globalen Bedingungen wurden alle User aufgenommen, welche den Vornamen
+       "Carlo besitzen" \\
+       \hline
+       Testszenario & 
+       \begin{itemize}
+         \item Als Admin anmelden
+         \item Mittels Link "Abonnemente" auf Abonnementenliste navigieren
+         \item In der Abonnementenliste das Abo "Bloodaxe Fist" auswählen
+         \item Unter Dropdown "Export" Excel und danach "Adressliste" auswählen
+       \end{itemize} \\
+       \hline
+       Erwartetes Resultat & 
+       \begin{itemize}
+         \item Excel wird heruntergeladen
+         \item Auf dem Excel befinden sich nur Adressen von Benutzern mit dem Vornamen "Carlo"
+      \end{itemize}\\
+      \hline
+     \end{tabular}
+     \caption{Testfall 4}
+\end{table}
 
 \chapter{Ausführung}
 \section{Klassenstruktur}
