@@ -1909,9 +1909,6 @@ INPUT testprotokoll.tex
 INPUT ./bilder//puzzle_tagline_blau.png
 INPUT bilder//puzzle_tagline_blau.png
 INPUT ./bilder//puzzle_tagline_blau.png
-INPUT ./bilder//puzzle_tagline_blau.png
-INPUT bilder//puzzle_tagline_blau.png
-INPUT ./bilder//puzzle_tagline_blau.png
 INPUT ./bilder//backlog_sprint:1.png
 INPUT ./bilder//backlog_sprint:1.png
 INPUT bilder//backlog_sprint:1.png
