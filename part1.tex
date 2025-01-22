@@ -30,7 +30,7 @@ PoC
 \begin{itemize}
 \item Folgende Komponenten der MailingLists Filter sollen mit dem neuen Konzept im PoC umgesetzt werden:
     \begin{itemize}
-        \item Globale Bedingungen > Sprache
+        \item Globale Bedingungen, Sprache
         \item Personen
         \item Ausgeschlossene Personen
         \item Optional: Gruppen / Rollen
@@ -215,9 +215,9 @@ besonders schützenswert. Dazu gehören unter anderem Adressen, Familiendaten, F
 
 \section{Applikationssicherheit}
 Obwohl im Rahmen der IPA nicht mit besonders schützenswerten Daten gearbeitet muss bei der Programmierung beachtet werden,
-dass bei den Filterungen stets auf ein Datenset zugegriffen wird welches durch das can-can-can-Gem validiert wurde um zu
+dass bei den Filterungen stets auf ein Datenset zugegriffen wird, welches durch das can-can-can-Gem validiert wurde um zu
 Verhindern dass Personen auf die Daten anderer Zugriff haben. Dies ist wichtig, da sich bei späterer Implementierung der IPA in 
-Hitobito besonders Schützenswerte Daten in der Datenbank befinden. Das Datenschutzkonzept dafür finden sie
+Hitobito besonders Schützenswerte Daten in der Datenbank befinden.
 
 \chapter{Organisation der IPA-Ergebnisse}
 
@@ -264,13 +264,19 @@ In dieser IPA unterteilen wir die Datensicherung in:
         \hline
         Interval & Mind. 2x täglich \\
         \hline
-        Beschreibung & Für die Entwicklung habe wurden die Repositories hitobito und hitobito\-generic geforked.
-        Auf diesen Repositories wird an Tagen an welchen Entwickelt wird, mind. 2x täglich committed. An diesen Tagen
+        Beschreibung & Für die Entwicklung wurden die Repositories hitobito und hitobito\-generic geforked.
+        Auf diesen Repositories wird an Tagen an welchen entwickelt wird, mind. 2x täglich committed. An diesen Tagen
         wird zur doppelten Sicherung zusätzlich eine Kopie des Projektes auf den USB Stick gespeichert, unter dem Ordner des jeweiligen Tages. \\
       \hline
       \end{tabular}
       \caption{Sicherung Code}
 \end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth,]{usb_save.png}
+    \caption{Nachweis Datensicherung USB Datenträger}
+\end{figure}
 
 \subsection{Wiederherstellung des Codes}
 Gehen die Daten lokal verloren, können diese entweder über das Github Repository oder den USB-Stich wiederhergestellt werden.
@@ -279,7 +285,9 @@ dieser SSH-Key nicht verfügbar, wird die Wiederherstellung über den USB-Stick 
 kopiert. Im Falle des USB-Sticks sind mit mehr Datenverlusten zu rechnen, falls der Datenverlust gegen Mittag oder Nachmittag auftritt, da
 die Speicherung erst am Ende des Tages erfolgt. Aus diesem Grund ist die Datenwiederherstellung mit Git zu bevorzugen.
 
-Die Nachweise für die jeweiligen Datensicherungen finden sie im Anhang unter: TODO(Screenshots in Anhang einfügen)
+\newpage
+
+Die Nachweise für die jeweiligen Datensicherungen finden sie im Anhang.
 \begin{itemize}
     \item \hyperref[sec:savusb]{USB-Sicherung}
     \item \hyperref[sec:savgit]{Git-Sicherung}
